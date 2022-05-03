@@ -1,0 +1,87 @@
+import React from 'react'
+
+function ContactUs() {
+  return (
+      <>
+          <section id="contact-info">
+              <div className="container">
+                  <div className="row">
+                      <div className="col-md-6">
+                          <div className="contact-form">
+                              <div className="head">
+                                  <h2>Contact Us</h2>
+                              </div>
+                              <form>
+                                  <div className="row">
+                                      <div className="col-md-12">
+                                          <div className="input-field">
+                                              <input type="text" name="first_name" placeholder="Name*" />
+                                          </div>
+                                          <div className="col-md-12">
+                                              <div className="input-field">
+                                                  <input type="number" name="first_name" placeholder="Mobile" />
+                                              </div>
+                                          </div>
+                                          <div className="col-md-12">
+                                              <div className="input-field">
+                                                  <input type="email" name="first_name" placeholder="Email*" />
+                                              </div>
+                                          </div>
+                                          <div className="col-md-12">
+                                              <div className="input-field">
+                                                  <div className="dropdown">
+                                                      <div className="select">
+                                                          <span>Patient</span>
+                                                          <i className="fa fa-chevron-down" />
+                                                      </div>
+                                                      <input type="hidden" name="gender" />
+                                                      <ul className="dropdown-menu">
+                                                          <li id>Andra Pradesh</li>
+                                                          <li id>Arunachal Pradesh</li>
+                                                          <li id>Assam</li>
+                                                          <li id>Bihar</li>
+                                                          <li id>Chhattisgarh</li>
+                                                          <li id>Goa</li>
+                                                      </ul>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </form>
+                          </div>
+                      </div>
+                      <div className="col-md-5 col-offset-1">
+                          <div className="info-txt">
+                              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                              <div className="info-links">
+                                  <p>
+                                      <a href><i className="fas fa-phone-alt" /> &nbsp; +971 4 4508 525</a>
+                                  </p>
+                              </div>
+                              <div className="social-links">
+                                  <ul>
+                                      <li>
+                                          <a href target="_blank"><i className="fab fa-facebook-f" /></a>
+                                      </li>
+                                      <li>
+                                          <a href target="_blank"><i className="fab fa-twitter" /></a>
+                                      </li>
+                                      <li>
+                                          <a href target="_blank"><i className="fab fa-instagram" /></a>
+                                      </li>
+                                      <li>
+                                          <a href target="_blank"><i className="fab fa-whatsapp" /></a>
+                                      </li>
+                                  </ul>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </section>
+      </>
+  )
+}
+
+export default ContactUs
