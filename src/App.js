@@ -1,15 +1,14 @@
 import './App.css';
 import { Route,Routes} from "react-router-dom";
-import ContactUs from './Component/Pages/ContactUs';
-import Header from './Component/Header';
+import HomePage from './Component/HomePage/HomePage';
 
 
 function App() {
   return (
     <>
       <Routes>
-        <Route path="/" element={<Header/>} />
-        <Route path="/contactus" element={<ContactUs/>} />
+        <Route path="/" element={<HomePage />} />
+        
       </Routes>
     </>
   );

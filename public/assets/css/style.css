@@ -181,11 +181,11 @@ header .header .logo img{
 header .header .logo img.logo-img-1{
     display: block;
 }
-header .header .logo img.logo-img-2{
+header .header .logo img.logo-img-2{    
     display: none;
 }
 header.active .header .logo img.logo-img-1{
-    display: none;
+    /* display: none; */
 }
 header.active .header .logo img.logo-img-2{
     display: block;
