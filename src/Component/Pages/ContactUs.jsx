@@ -53,7 +53,7 @@ function ContactUs() {
                       </div>
                       <div className="col-md-5 col-offset-1">
                           <div className="info-txt">
-                              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                              <p>For assistance in case of any <br />medical emergency, call on our <br />24-hour helpline:</p>
                               <div className="info-links">
                                   <p>
                                       <a href><i className="fas fa-phone-alt" /> &nbsp; +971 4 4508 525</a>

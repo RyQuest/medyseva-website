@@ -14,12 +14,13 @@
     font-size: 32px;
 }
 #banner-slider .slide .cover .header-content .head h2 {
-    font-size: 28px;
+    font-size: 20px;
     font-family: var(--Poppins);
     color: #fff;
     position: relative;
     text-align: left;
     padding-left: 20px;
+    line-height: 34px;
 }
     #banner-slider .slide .cover .header-content .head ul li {
     font-family: var(--primary-color);
@@ -29,6 +30,15 @@
     line-height: 32px;
     list-style: none;
     padding-bottom: 10px;
+}
+#banner-slider .slide .cover .header-content .head h2:before {
+    content: "";
+    background-color: #fff;
+    position: absolute;
+    top: 0;
+    width: 4px;
+    height: 80%;
+    left: 0px;
 }
     #banner-slider .slide .cover .header-content .head p {
     color: #fff;
@@ -267,6 +277,20 @@
     background-repeat: no-repeat;
     background-position: unset;
     text-align: center;
+}
+.stats {
+    text-align: center;
+    font-size: 35px;
+    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 20px;
+}
+.stats .counting {
+    font-size: 36px;
+    font-family: var(--Montserrat);
+    color: var(--primary-color);
+    font-weight: 500;
+    padding: 10px 0 0;
 }
 
 }

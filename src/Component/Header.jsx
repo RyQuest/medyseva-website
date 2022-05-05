@@ -58,7 +58,62 @@ function Header() {
                     </div>
                 </div>
             </header>
-
+            {/* <div class="side-menu-area">
+                <div class="side-menu-box">
+                    <div class="side-menu">
+                        <div class="header">
+                            <div class="logo">
+                                <a href="index.html">
+                                    <img src="assets/img/logo/logo-red.png" alt="logo"/>
+                                </a>
+                            </div>
+                            <div class="close-btn">
+                                <button type="button"><i class="fas fa-times"></i></button>
+                            </div>
+                        </div>
+                        <div class="navs">
+                            <ul>
+                                <li>
+                                    <a>About Us</a>
+                                    <div class="sub-menu">
+                                        <ul>
+                                            <li>
+                                                <a href="">one</a>
+                                            </li>
+                                            <li>
+                                                <a href="">two</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a>Services</a>
+                                    <div class="sub-menu">
+                                        <ul>
+                                            <li>
+                                                <a href="">one</a>
+                                            </li>
+                                            <li>
+                                                <a href="">two</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="">Join Us</a>
+                                </li>
+                                <li>
+                                    <a href="">Blogs</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="request-btn">
+                            <button type="button" class="btn-1">Login</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="overlay"></div>
+            </div> */}
         </>
     )
 }
