@@ -25,7 +25,7 @@
     box-sizing: border-box;
 }
 body{
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat', sans-serif !important;
 }
 
 a,button,ul,ol,li,p,h1,h2,h3,h4,h5,h6{
@@ -124,7 +124,7 @@ input[type="number"]{
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     cursor: pointer;
     transition: .3s;
-    color: #fff;
+    color: #fff !important;
 }
 .round-btn{
     width: 44px;
@@ -199,7 +199,7 @@ header .header .navs > ul > li > a{
     display: inline-flex;
     align-items: center;
     font-size: 16px;
-    color: var(--primary-color);
+    color: var(--primary-color) !important;
     padding: 25px 12px;
     margin: 0 3px;
     cursor: pointer;
@@ -763,9 +763,9 @@ background-image: url(../img/texture.png);
     font-family: var(--Montserrat);
     font-weight: normal;
 }
-#video .des h2 span{
+/* #video .des h2 span{
     color: #890304;
-}
+} */
 #video .des {
     padding: 30px 0 0;
 }
@@ -1216,6 +1216,10 @@ font-size: 16px;
 .joinus-medi-sec h4 img{
    height: 16px;
 }
+.joinus-medi-sec h4 a{
+    color: #0d6efd !important;
+    text-decoration: underline !important;
+}
 .jon-us-inner-box{
    background-color: #fff;
    padding: 50px;
@@ -1229,6 +1233,12 @@ font-size: 16px;
     padding: 10px;
     margin: 40px auto;
 }
+.jon-us-inner-box .joinUsInfo {
+    text-decoration: none;
+    color: #063579;
+    font-weight: 500;
+}
+   
 .jon-us-inner-box h5{
     padding-bottom: 10px;
 }
