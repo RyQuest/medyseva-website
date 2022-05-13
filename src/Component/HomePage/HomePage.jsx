@@ -89,7 +89,7 @@ import ContactUs from '../Pages/ContactUs'
 
 
                         <section id="video">
-                            <div className="container">
+                            <div className="container"id="about">
                                 <div className="row">
                                     <div className="col-md-12">
                                         <div className="video-head">
@@ -104,7 +104,7 @@ import ContactUs from '../Pages/ContactUs'
                                             <p>Medyseva is a healthcare startup focusing on Telemedicine in Rural India. It seeks to become the ultimate healthcare partner of all citizens such that they can get access to high quality healthcare services with ease and at affordable prices. It bridges the gap between the urban doctors and rural patients through Medyseva Kendras having state-of-the-art technology, which cover the entire spectrum of services that are needed to keep one healthy - from having virtual consultations to getting surgeries, from booking diagnostic tests to digitizing medical records.</p>
                                             <div className="col-md-12">
                                                 <div className="btn1">
-                                                    <a href>Know More</a>
+                                                    <a className='text-white' href>Know More</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -293,7 +293,7 @@ import ContactUs from '../Pages/ContactUs'
                                     </div>
                                     <div className="col-md-12">
                                         <div className="btn1">
-                                            <a href>Know More</a>
+                                            <a className='text-white' href>Know More</a>
                                         </div>
                                     </div>
                                 </div>
@@ -311,17 +311,17 @@ import ContactUs from '../Pages/ContactUs'
                                     </div>
                                     <div className="col-lg-3 stats col-6">
                                         <img src="assets/img/counter/one.png" />
-                                        <div className="counting" data-count={520} id="plus">0</div>
+                                        <div className="counting" data-count={3000} id="plus">0</div>
                                         <h5>CONSULTATIONS</h5>
                                     </div>
                                     <div className="col-lg-3 stats col-6">
                                         <img src="assets/img/counter/two.png" />
-                                        <div className="counting" data-count={425} id="plus">0</div>
+                                        <div className="counting" data-count={30} id="plus">0</div>
                                         <h5>SPECIALTIES COVERED</h5>
                                     </div>
                                     <div className="col-lg-3 stats col-6">
                                         <img src="assets/img/counter/three.png" />
-                                        <div className="counting" data-count={65} id="plus">0</div>
+                                        <div className="counting" data-count={100} id="plus">0</div>
                                         <h5>DOCTORS ON BOARD</h5>
                                     </div>
                                     <div className="col-lg-3 stats col-6">
@@ -354,7 +354,7 @@ import ContactUs from '../Pages/ContactUs'
                                                 <p>2+ years experience in rural finrech</p>
                                             </div>
                                             <div className="text-center">
-                                                <a href><img src="assets/img/in.png" /></a>
+                                                <a href="https://www.linkedin.com/in/dr-vishesh-kasliwal/?trk=public_profile_browsemap&originalSubdomain=in&original_referer=" target={'_blank'}><img src="assets/img/in.png" /></a>
                                             </div>
                                         </div>
                                     </div>
@@ -369,10 +369,27 @@ import ContactUs from '../Pages/ContactUs'
                                                 <p>SRCC Alumnus</p>
                                             </div>
                                             <div className="text-center">
-                                                <a href><img src="assets/img/in.png" /></a>
+                                                <a href="https://www.linkedin.com/in/rachita-kasliwal89/?originalSubdomain=in" target={'_blank'}><img src="assets/img/in.png" /></a>
                                             </div>
                                         </div>
                                     </div>
+
+                                    <div className="col-md-3 col-sm-6 col-12">
+                                        <div className="team-medi-box">
+                                            <img className="doc-img" src="assets/img/team4.png" />
+                                            <h3>Mehul</h3>
+                                            <h6>Technology Head</h6>
+                                            <div className="other-info-box">
+                                                <p>B.E.,MBA</p>
+                                                <p>10+ years experience in IT</p>
+                                                <p>Ex- Accenture, Wipro</p>
+                                            </div>
+                                            <div className="text-center">
+                                                <a href="https://www.linkedin.com/in/mehul-jain-13269112/" target={'_blank'}><img src="assets/img/in.png" /></a>
+                                            </div>
+                                        </div>
+                                    </div>
+
                                     <div className="col-md-3 col-sm-6 col-12">
                                         <div className="team-medi-box">
                                             <img className="doc-img" src="assets/img/team3.png" />
@@ -383,28 +400,14 @@ import ContactUs from '../Pages/ContactUs'
                                                 <p>10+ years experience in healthcare</p>
                                             </div>
                                             <div className="text-center">
-                                                <a href><img src="assets/img/in.png" /></a>
+                                                <a href="https://www.linkedin.com/in/dr-rashmi-patidar-367398238/" target={'_blank'}><img src="assets/img/in.png" /></a>
                                             </div>
                                         </div>
                                     </div>
-                                    <div className="col-md-3 col-sm-6 col-12">
-                                        <div className="team-medi-box">
-                                            <img className="doc-img" src="assets/img/team4.png" />
-                                            <h3>Mehul</h3>
-                                            <h6>Technology</h6>
-                                            <div className="other-info-box">
-                                                <p>B.E.,MBA</p>
-                                                <p>10+ years experience in IT</p>
-                                                <p>Ex- Accenture, Wipro</p>
-                                            </div>
-                                            <div className="text-center">
-                                                <a href><img src="assets/img/in.png" /></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    {/* <div class="col-md-3 col-sm-6 col-12">
+                                   
+             <div class="col-md-3 col-sm-6 col-12">
                <div class="team-medi-box">
-                  <img class="doc-img" src="assets/img/team5.jpg">
+                  <img class="doc-img" src="assets/img/team5.jpg"/>
                   <h3>Umanshi Agrawal</h3>
                   <h6>Finance</h6>
                   <div class="other-info-box">
@@ -413,10 +416,10 @@ import ContactUs from '../Pages/ContactUs'
                      <p>& Auditing</p>
                   </div>
                   <div class="text-center">
-                     <a href=""><img src="assets/img/in.png"></a>
+                     <a href="https://www.linkedin.com/in/ca-umanshi-agrawal/" target={'_blank'}><img src="assets/img/in.png"/></a>
                   </div>
                </div>
-            </div> */}
+            </div> 
                                 </div>
                             </div>
                         </section>
@@ -613,10 +616,10 @@ import ContactUs from '../Pages/ContactUs'
                                                 <li>Manage your profile with advanced profile editor</li>
                                                 <li>Respond to your patients’ feedback</li>
                                                 <li>Provide online consultation to patients</li>
-                                                <li>Manage your clinic with a Ray by Practo subscription</li>
+                                               {/*<li>Manage your clinic with a Ray by Practo subscription</li>*/}
                                                 <li>See patient records from anywhere</li>
-                                                <li>Track your clinic’s performance on the go</li>
-                                                <li>Manage and track your Prime subscription</li>
+                                                {/*<li>Track your clinic’s performance on the go</li>
+                                                <li>Manage and track your Prime subscription</li> */}
                                             </ul>
                                         </div>
                                         <div className="store-icon">
@@ -759,7 +762,7 @@ import ContactUs from '../Pages/ContactUs'
 
                         <ContactUs/>
 
-                        <section className="joinus-medi-sec">
+                        <section className="joinus-medi-sec"id="join-us">
                             <div className="container">
                                 <div className="row">
                                     <div className="col-sm-12">
@@ -781,13 +784,13 @@ import ContactUs from '../Pages/ContactUs'
                                             </div>
                                             <h5>Or send in your resume to </h5>
                                             <p>
-                                                <a href><i className="fas fa-envelope" /> &nbsp; info@lntinfotech.com</a>
+                                                <a href><i className="fas fa-envelope" /> &nbsp; info@medyseva.com</a>
                                             </p>
                                             {/* <h5>Doctors can download our App</h5>
                       <a style="text-decoration: none;" href="https://www.practo.com/consult" target="_blank"><h4 class="mb-0"> https://www.practo.com/consult</h4></a>
                       <a style="text-decoration: none;" href="https://www.practo.com/providers/clinics/profile" target="_blank"><h4 class="mb-5"> https://www.practo.com/providers/clinics/profile</h4></a> */}
                                             <div className="btn1">
-                                                <a href>Apply Now</a>
+                                                <a className='text-white' href>Apply Now</a>
                                             </div>
                                         </div>
                                     </div>

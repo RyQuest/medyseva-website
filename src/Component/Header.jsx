@@ -113,41 +113,41 @@ function Header() {
                         <div className="navs">
                             <ul>
                                 <li>
-                                    <a href=" ">About Us</a>
+                                    <a href="#about">About Us</a>
                                 </li>
                                 <li>
-                                    <a href=" ">Services</a>
+                                    <a href="">Services</a>
                                     <div className="sub-menu">
                                         <ul>
                                             <li>
-                                                <a href=" ">Consultation</a>
+                                                <a href="#services">Consultation</a>
                                             </li>
                                             <li>
-                                                <a href=" ">Pathology</a>
+                                                <a href="#services ">Pathology</a>
                                             </li>
                                             <li>
-                                                <a href=" ">Radiology</a>
+                                                <a href=" #services">Radiology</a>
                                             </li>
                                             <li>
-                                                <a href=" ">Hospitalization</a>
+                                                <a href=" #services">Hospitalization</a>
                                             </li>
                                             <li>
-                                                <a href=" ">Ambulance</a>
+                                                <a href=" #services">Ambulance</a>
                                             </li>
                                         </ul>
                                     </div>
                                 </li>
                                 <li>
-                                    <a href=" ">Join Us</a>
+                                    <a href="#join-us">Join Us</a>
                                 </li>
-                                <li>
+                               {/* <li>
                                     <a href=" ">Blogs</a>
-                                </li>
+                                </li> */}
                             </ul>
                         </div>
                         <div className="btns-box">
                             <div className="request-btn">
-                                <button type="button" className="btn-1">Login</button>
+                                <a   href="https://clinic.medyseva.com/login" target={"_blank"} className="btn-1">Login</a>
                             </div>
                         </div>
                         <div className="menu-btn-box d-xl-none">

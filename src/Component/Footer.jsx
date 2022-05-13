@@ -15,10 +15,10 @@ function Footer() {
                           <div className="footer-links">
                               <ul>
                                   <li>
-                                      <a href>About Us</a>
+                                      <a href="#about">About Us</a>
                                   </li>
                                   <li>
-                                      <a href>Services</a>
+                                      <a href="#services">Services</a>
                                   </li>
                                   <li>
                                       <a href>Testimonials</a>
@@ -27,7 +27,7 @@ function Footer() {
                                       <a href>Blogs</a>
                                   </li>
                                   <li>
-                                      <a href>Join Us</a>
+                                      <a href="#services">Join Us</a>
                                   </li>
                                   <li>
                                       <a href>Contact US</a>
@@ -39,10 +39,10 @@ function Footer() {
                           <div className="info-links">
                               <ul>
                                   <li>
-                                      <a href><i className="fas fa-phone-alt" /> &nbsp; +971 4 4508 525</a>
+                                      <a href><i className="fas fa-phone-alt" /> &nbsp; +91 75669 75666</a>
                                   </li>
                                   <li>
-                                      <a href><i className="fas fa-envelope" /> &nbsp; info@lntinfotech.com</a>
+                                      <a href><i className="fas fa-envelope" /> &nbsp; info@medyseva.com</a>
                                   </li>
                               </ul>
                           </div>
@@ -52,16 +52,16 @@ function Footer() {
                               <h5>Follow Us</h5>
                               <ul>
                                   <li>
-                                      <a href target="_blank"><i className="fab fa-facebook-f" /></a>
+                                      <a href="https://www.facebook.com/Medyseva/" target="_blank"><i className="fab fa-facebook-f" /></a>
                                   </li>
                                   <li>
-                                      <a href target="_blank"><i className="fab fa-twitter" /></a>
+                                      <a href="https://mobile.twitter.com/medyseva" target="_blank"><i className="fab fa-twitter" /></a>
                                   </li>
                                   <li>
-                                      <a href target="_blank"><i className="fab fa-linkedin-in" /></a>
+                                      <a href="https://www.linkedin.com/company/medyseva/" target="_blank"><i className="fab fa-linkedin-in" /></a>
                                   </li>
                                   <li>
-                                      <a href target="_blank"><i className="fab fa-instagram" /></a>
+                                      <a href="https://www.instagram.com/medy.seva/?utm_medium=copy_link" target="_blank"><i className="fab fa-instagram" /></a>
                                   </li>
                               </ul>
                           </div>
@@ -69,7 +69,7 @@ function Footer() {
                   </div>
               </div>
               <div className="copyright-line">
-                  Copyright 2021. Mediseva
+                  Copyright@2022. Medyseva
               </div>
           </footer>
       </>
