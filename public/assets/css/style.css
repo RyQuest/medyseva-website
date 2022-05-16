@@ -1658,9 +1658,112 @@ font-size: 16px;
     width: 100%;
 }
 
+#about-us .modal-body{
+    height: 500px; 
+    overflow-y: scroll;
+}
+#about-us .modal-body p{
+    font-size: 16px;
+    font-family: var(--Montserrat);
+    margin-bottom: 10px;
+}
+#about-us .modal-body p span{
+    color: rgb(77, 80, 154);
+    font-weight: 500;
+}
+#Specialities .modal-body{
+    height: 500px; 
+    overflow-y: scroll;
+}
+#Specialities .modal-body .special-points ul{
+    padding: 0;
+    margin: 0;
+}
+#Specialities .modal-body .special-points ul li{
+    list-style: none;
+    font-size: 18px;
+    font-family: var(--Montserrat);
+    font-weight: 400;
+    line-height: 40px;
+    border-bottom: 1px solid #ddd;
+}
+#join-form .head-modal button{
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: #000;
+    font-size: 20px;
+    height: auto;
+    padding: 10px 15px;
+    cursor: pointer;
+    margin-left: auto;
+    display: block;
+}
+#join-form .head-modal .title{
+    text-align: center;
+}
+#join-form .head-modal .title h3{
+    color: rgb(77, 80, 154);
+    font-size: 24px;
+    margin: 0px auto;
+    text-align: center;
+    margin-bottom: 10px;
+}
+#join-form .head-modal .title p{
+    color: rgb(87, 87, 87);
+    text-align: center;
+    font-size: 16px;
+}
+#join-form .modal-body button{
+    background: rgb(189, 210, 222);
+    text-align: center;
+    padding: 10px 0px;
+    color: black;
+    cursor: pointer;
+    width: 100%;
+    outline: none;
+    border: none;
+}
+#join-form .modal-body button.active{
+    background: rgb(1, 92, 147);
+    text-align: center;
+    padding: 10px 0px;
+    cursor: pointer;
+    color: #fff;
+}
+#join-form .modal-body .input-field{
+    margin-bottom: 15px;
+}
+#join-form .modal-body .input-field span{
+    display: block;
+    font-size: 15px;
+    color: #333;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+#join-form .modal-body .input-field  input{
+    border: none;
+    outline: none;
+    box-shadow: none;
+    width: 100%;
+    background-color: transparent;
+    border: 1px solid #000;
+    padding: 5px 15px;
+    height: 40px;
+}
+#join-form .modal-body .head-form{
+    margin: 30px;
+}
 
-
-
-
+#join-form .modal-body .input-field input[type="submit"] {
+    background: var(--primary-color);
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 15px;
+    transition: 0.3s ease;
+    font-weight: 600;
+    height: unset;
+}
 
 
