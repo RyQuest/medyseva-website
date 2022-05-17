@@ -56,7 +56,7 @@ function ContactUs() {
                               <p>For assistance in case of any <br />medical emergency, call on our <br />24-hour helpline:</p>
                               <div className="info-links">
                                   <p>
-                                      <a href><i className="fas fa-phone-alt" /> &nbsp; +971 4 4508 525</a>
+                                      <a href><i className="fas fa-phone-alt" /> &nbsp; +91 75669 75666</a>
                                   </p>
                               </div>
                               <div className="social-links">
