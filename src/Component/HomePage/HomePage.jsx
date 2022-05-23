@@ -1,3 +1,4 @@
+import axios from 'axios';
 import React, { useState } from 'react'
 import Footer from '../Footer'
 import PageLayout from '../Layout/PageLayout'
@@ -6,16 +7,64 @@ import ContactUs from '../Pages/ContactUs'
 export default function HomePage() {
 
     const [joinTab, setJoinTab] = useState(1);
+    const [doctorDetails, setDoctorDetails] = useState({
+        contactus_type: "",
+        doctor_name: "",
+        doctor_email: "",
+        doctor_number: "",
+        doctor_specialization: "",
+        center_name: "",
+        center_phone_num: "",
+        center_address: "",
+        center_email: "",
+    })
+
+    const Details = (e) => {
+        setDoctorDetails({...doctorDetails,[e.target.name]: e.target.value })
+    }
+    console.log(doctorDetails)
+    const doctorPayload = {
+        contactus_type: "doctor",
+        doctor_name: doctorDetails.doctor_name,
+        doctor_email: doctorDetails.doctor_email,
+        doctor_number: doctorDetails.doctor_number,
+        doctor_specialization: doctorDetails.doctor_specialization,
+        center_name: doctorDetails.center_name,
+        center_phone_num: doctorDetails.center_phone_num,
+        center_address: doctorDetails.center_address,
+        center_email: doctorDetails.center_email,
+    }
+    const centerPayload = {
+        contactus_type: "center",
+        doctor_name: doctorDetails.doctor_name,
+        doctor_email: doctorDetails.doctor_email,
+        doctor_number: doctorDetails.doctor_number,
+        doctor_specialization: doctorDetails.doctor_specialization,
+        center_name: doctorDetails.center_name,
+        center_phone_num: doctorDetails.center_phone_num,
+        center_address: doctorDetails.center_address,
+        center_email: doctorDetails.center_email,
+    }
+    const HandleDoctorSubmit = async (e) => {
+        e.preventDefault();
+        console.log(doctorPayload)
+        const res = await axios.post("http://api.medyseva.com/api/contact_us", doctorPayload)
+        console.log(res)
+    }
+    const HandleCenterSubmit = async (e) => {
+        e.preventDefault();
+        const Data = await axios.post("http://api.medyseva.com/api/contactus", centerPayload)
+        console.log(Data)
+        console.log(doctorDetails)
+    }
+    console.log("after update", doctorDetails)
+
 
     return (
         <>
             <div >
                 <PageLayout />
-
-
                 <div>
-
-
                     <section id="banner-slider">
                         <div className="top-banner-slider">
                             <div className="owl-carousel">
@@ -101,7 +150,7 @@ export default function HomePage() {
                                         </div>
                                     </div>
                                     <div className="des">
-                                        <h2>About <span>Us</span></h2>
+                                        <h2>About Us</h2>
                                         <p>Medyseva is a healthcare startup focusing on Telemedicine in Rural India. It seeks to become the ultimate healthcare partner of all citizens such that they can get access to high quality healthcare services with ease and at affordable prices. It bridges the gap between the urban doctors and rural patients through Medyseva Kendras having state-of-the-art technology, which cover the entire spectrum of services that are needed to keep one healthy - from having virtual consultations to getting surgeries, from booking diagnostic tests to digitizing medical records.</p>
                                         <div className="col-md-12">
                                             <div className="btn1">
@@ -373,8 +422,6 @@ export default function HomePage() {
                                 </div>
                             </div>
 
-
-
                             <div className="row">
                                 <div className="col-md-3 col-sm-6 col-12">
                                     <div className="team-medi-box">
@@ -438,7 +485,6 @@ export default function HomePage() {
                                     </div>
                                 </div>
 
-
                                 <div class="col-md-3 col-sm-6 col-12">
                                     <div class="team-medi-box">
                                         <img class="doc-img" src="assets/img/team5.jpg" />
@@ -454,12 +500,7 @@ export default function HomePage() {
                                         </div>
                                     </div>
                                 </div>
-
-
-
                             </div>
-
-
                         </div>
                     </section>
 
@@ -717,7 +758,7 @@ export default function HomePage() {
 
 
                 <div className="modal fade" id="about-us" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div className="modal-dialog modal-dialog-centered">
+                    <div className="modal-dialog modal-dialog-centered" id='aboutUs_modal'>
                         <div className="modal-content">
                             <div className="modal-header">
                                 <h5 className="modal-title" id="exampleModalLabel">About Us</h5>
@@ -726,7 +767,7 @@ export default function HomePage() {
                             <div className="modal-body">
                                 <div className="content-des">
                                     <p>Medyseva has identified several problems faced by the people in small towns and villages, pertaining to healthcare, and seeks to solve most of them in the short run.</p>
-                                    <p>Problem: Though there are doctors available in rural areas, but they are mostly general physicians. There is a dearth of specialists.</p>
+                                    <p><span>Problem:</span> Though there are doctors available in rural areas, but they are mostly general physicians. There is a dearth of specialists.</p>
 
                                     <p><span>Our Solution</span>: Medyseva connects people in rural areas to specialists residing in urban areas via teleconferencing. In this way, people do not need to travel to far off places to get a medical treatment. Also, many people do not have much knowledge about who to consult and how to go about the process. Medyseva eliminates all such hassles and directly connects the people to excellent doctors in each field.</p>
 
@@ -813,68 +854,72 @@ export default function HomePage() {
                                     <div class="col-md-12">
                                         {joinTab === 1 && <div className='head-form'>
                                             <div className="row">
-                                                <div className="col-md-12">
-                                                    <div className="input-field">
-                                                        <span>Doctor Name</span>
-                                                        <input type="" name="first_name" required="" value="" placeholder='Enter Your Name'></input>
+                                                <form onSubmit={HandleDoctorSubmit}>
+                                                    <div className="col-md-12">
+                                                        <div className="input-field">
+                                                            <span>Doctor Name</span>
+                                                            <input type="text" name="doctor_name" required="" value={doctorDetails.doctor_name} placeholder='Enter Your Name' onChange={(e) => Details(e)}></input>
+                                                        </div>
                                                     </div>
-                                                </div>
-                                                <div className="col-md-12">
-                                                    <div className="input-field">
-                                                        <span>Specialization</span>
-                                                        <input type="" name="first_name" required="" value="" placeholder='Enter Specialization'></input>
+                                                    <div className="col-md-12">
+                                                        <div className="input-field">
+                                                            <span>Specialization</span>
+                                                            <input type="text" name="doctor_specialization" required="" value={doctorDetails.doctor_specialization} placeholder='Enter Specialization' onChange={(e) => Details(e)}></input>
+                                                        </div>
                                                     </div>
-                                                </div>
-                                                <div className="col-md-12">
-                                                    <div className="input-field">
-                                                        <span>Contact Number</span>
-                                                        <input type="" name="first_name" required="" value="" placeholder='Enter Your Number'></input>
+                                                    <div className="col-md-12">
+                                                        <div className="input-field">
+                                                            <span>Contact Number</span>
+                                                            <input type="number" name="doctor_number" required="" value={doctorDetails.doctor_number} placeholder='Enter Your Number' onChange={(e) => Details(e)}></input>
+                                                        </div>
                                                     </div>
-                                                </div>
-                                                <div className="col-md-12">
-                                                    <div className="input-field">
-                                                        <span>Email</span>
-                                                        <input type="" name="first_name" required="" value="" placeholder='Enter Your Email'></input>
+                                                    <div className="col-md-12">
+                                                        <div className="input-field">
+                                                            <span>Email</span>
+                                                            <input type="email" name="doctor_email" required="" value={doctorDetails.doctor_email} placeholder='Enter Your Email' onChange={(e) => Details(e)}></input>
+                                                        </div>
                                                     </div>
-                                                </div>
-                                                <div className="col-md-12">
-                                                    <div className="input-field">
-                                                        <input type="submit" value="Submit"></input>
+                                                    <div className="col-md-12">
+                                                        <div className="input-field d-flex justify-content-center">
+                                                            <input type="submit" value="submit" ></input>
+                                                        </div>
                                                     </div>
-                                                </div>
+                                                </form>
                                             </div>
                                         </div>}
                                         {joinTab === 2 && <div className='head-form'>
                                             <div className="row">
-                                                <div className="col-md-12">
-                                                    <div className="input-field">
-                                                        <span>Name</span>
-                                                        <input type="" name="first_name" required="" value="" placeholder='Enter Your Name'></input>
+                                                <form onSubmit={HandleCenterSubmit}>
+                                                    <div className="col-md-12">
+                                                        <div className="input-field">
+                                                            <span>Name</span>
+                                                            <input type="text" name="center_name" required="" value={doctorDetails.center_name} placeholder='Enter Your Name' onChange={(e) => Details(e)}></input>
+                                                        </div>
                                                     </div>
-                                                </div>
-                                                <div className="col-md-12">
-                                                    <div className="input-field">
-                                                        <span>Phone Number</span>
-                                                        <input type="" name="first_name" required="" value="" placeholder='Enter Your Number'></input>
+                                                    <div className="col-md-12">
+                                                        <div className="input-field">
+                                                            <span>Phone Number</span>
+                                                            <input type="number" name="center_phone_num" required="" value={doctorDetails.center_phone_num} placeholder='Enter Your Number' onChange={(e) => Details(e)}></input>
+                                                        </div>
                                                     </div>
-                                                </div>
-                                                <div className="col-md-12">
-                                                    <div className="input-field">
-                                                        <span>Address</span>
-                                                        <input type="" name="first_name" required="" value="" placeholder='Enter Your Address'></input>
+                                                    <div className="col-md-12">
+                                                        <div className="input-field">
+                                                            <span>Address</span>
+                                                            <input type="text" name="center_address" required="" value={doctorDetails.center_address} placeholder='Enter Your Address' onChange={(e) => Details(e)}></input>
+                                                        </div>
                                                     </div>
-                                                </div>
-                                                <div className="col-md-12">
-                                                    <div className="input-field">
-                                                        <span>Email</span>
-                                                        <input type="" name="first_name" required="" value="" placeholder='Enter Your Email'></input>
+                                                    <div className="col-md-12">
+                                                        <div className="input-field">
+                                                            <span>Email</span>
+                                                            <input type="email" name="center_email" required="" value={doctorDetails.center_email} placeholder='Enter Your Email' onChange={(e) => Details(e)}></input>
+                                                        </div>
                                                     </div>
-                                                </div>
-                                                <div className="col-md-12">
-                                                    <div className="input-field">
-                                                        <input type="submit" value="Submit"></input>
+                                                    <div className="col-md-12">
+                                                        <div className="input-field d-flex justify-content-center">
+                                                            <input type="submit" value="Submit"></input>
+                                                        </div>
                                                     </div>
-                                                </div>
+                                                </form>
                                             </div>
                                         </div>}
                                     </div>
