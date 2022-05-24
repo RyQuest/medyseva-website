@@ -657,6 +657,8 @@ header .header .btns-box .contact-btn .contact-info .info a:hover {
 
 #about-us {
   padding: 40px 0;
+  text-align: justify;
+  text-justify: inter-word;
 }
 
 #about-us .modal-header h5 {
@@ -1255,7 +1257,7 @@ background-image: url(../img/texture.png);
   color: var(--primary-color);
   font-family: var(--Montserrat);
   font-weight: normal;
-  padding-bottom: 50px;
+  padding-bottom: 15px;
 }
 
 #award {
@@ -1457,6 +1459,10 @@ background-image: url(../img/texture.png);
 #contact-info .contact-form .head h2 {
   text-align: left;
 }
+#contact-info .contact-form .input-field input[type="submit"]{
+max-width: 150px;
+background-color: #0754c0;
+;}
 #contact-info .contact-form .input-field {
   margin-bottom: 20px;
 }
@@ -1663,6 +1669,7 @@ background-image: url(../img/texture.png);
 #about-us .modal-body {
   height: 450px;
   overflow-y: scroll;
+  padding: 0.5rem;
 }
 #about-us .modal-header h5 {
   font-family: serif;
@@ -1720,7 +1727,7 @@ background-image: url(../img/texture.png);
 
 #join-form .head-modal .title h3 {
   color: rgb(77, 80, 154);
-  font-family: serif;
+  font-family: justified;
   font-size: 40px;
   margin: 0px auto;
   text-align: center;
@@ -1790,4 +1797,11 @@ background-image: url(../img/texture.png);
   font-weight: 600;
   height: unset;
   width: 100px;
+}
+
+.error-message {
+  color: #b90000;
+  margin-bottom: 5px;
+  margin-top: 2px;
+  text-align: center;
 }
