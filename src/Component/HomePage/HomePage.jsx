@@ -19,45 +19,23 @@ export default function HomePage() {
         center_email: "",
     })
 
+    // HTTP.get('/login', { params: { "emailAddress": this.state.email, "password": this.state.password } })
+    // HTTP.get(`/login?emailAddress=${this.state.email}password=${this.state.password}`)
+
     const Details = (e) => {
-        setDoctorDetails({...doctorDetails,[e.target.name]: e.target.value })
+        setDoctorDetails({ ...doctorDetails, [e.target.name]: e.target.value })
     }
-    console.log(doctorDetails)
-    const doctorPayload = {
-        contactus_type: "doctor",
-        doctor_name: doctorDetails.doctor_name,
-        doctor_email: doctorDetails.doctor_email,
-        doctor_number: doctorDetails.doctor_number,
-        doctor_specialization: doctorDetails.doctor_specialization,
-        center_name: doctorDetails.center_name,
-        center_phone_num: doctorDetails.center_phone_num,
-        center_address: doctorDetails.center_address,
-        center_email: doctorDetails.center_email,
-    }
-    const centerPayload = {
-        contactus_type: "center",
-        doctor_name: doctorDetails.doctor_name,
-        doctor_email: doctorDetails.doctor_email,
-        doctor_number: doctorDetails.doctor_number,
-        doctor_specialization: doctorDetails.doctor_specialization,
-        center_name: doctorDetails.center_name,
-        center_phone_num: doctorDetails.center_phone_num,
-        center_address: doctorDetails.center_address,
-        center_email: doctorDetails.center_email,
-    }
+    
     const HandleDoctorSubmit = async (e) => {
         e.preventDefault();
-        console.log(doctorPayload)
-        const res = await axios.post("http://api.medyseva.com/api/contact_us", doctorPayload)
+        const res = await axios.post(`http://api.medyseva.com/api/contact_us?contactus_type=${"doctor"}&doctor_name=${doctorDetails.doctor_name}&doctor_email=${doctorDetails.doctor_email}&doctor_number=${doctorDetails.doctor_number}&doctor_specialization=${doctorDetails.doctor_specialization}&center_name=${doctorDetails.center_name}&center_phone_num=${doctorDetails.center_phone_num}&center_address=${doctorDetails.center_address}&center_email=${doctorDetails.center_email}`)
         console.log(res)
     }
     const HandleCenterSubmit = async (e) => {
         e.preventDefault();
-        const Data = await axios.post("http://api.medyseva.com/api/contactus", centerPayload)
-        console.log(Data)
-        console.log(doctorDetails)
+        const res = await axios.post(`http://api.medyseva.com/api/contact_us?contactus_type=${"center"}&doctor_name=${doctorDetails.doctor_name}&doctor_email=${doctorDetails.doctor_email}&doctor_number=${doctorDetails.doctor_number}&doctor_specialization=${doctorDetails.doctor_specialization}&center_name=${doctorDetails.center_name}&center_phone_num=${doctorDetails.center_phone_num}&center_address=${doctorDetails.center_address}&center_email=${doctorDetails.center_email}`)
+        console.log(res)
     }
-    console.log("after update", doctorDetails)
 
 
     return (
