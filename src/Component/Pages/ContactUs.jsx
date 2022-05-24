@@ -36,12 +36,12 @@ function ContactUs() {
                                                       </div>
                                                       <input type="hidden" name="gender" />
                                                       <ul className="dropdown-menu">
-                                                          <li id>Andra Pradesh</li>
-                                                          <li id>Arunachal Pradesh</li>
-                                                          <li id>Assam</li>
-                                                          <li id>Bihar</li>
-                                                          <li id>Chhattisgarh</li>
-                                                          <li id>Goa</li>
+                                                          <li id>Patient</li>
+                                                          <li id>Doctor</li>
+                                                          <li id>Business Owner</li>
+                                                          <li id>Hospital</li>
+                                                          <li id>Laboratory</li>
+                                                          <li id>Job Seeker</li>
                                                       </ul>
                                                   </div>
                                               </div>
