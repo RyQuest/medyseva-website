@@ -417,7 +417,7 @@ export default function HomePage() {
                             </div>
 
                             <div className="row">
-                                <div className="col-md-3 col-sm-6 col-12">
+                                <div className="col-md-4 col-sm-6 col-12">
                                     <div className="team-medi-box">
                                         <img className="doc-img" src="assets/img/team1.png" />
                                         <h3>Vishesh</h3>
@@ -432,7 +432,7 @@ export default function HomePage() {
                                         </div>
                                     </div>
                                 </div>
-                                <div className="col-md-3 col-sm-6 col-12">
+                                <div className="col-md-4 col-sm-6 col-12">
                                     <div className="team-medi-box">
                                         <img className="doc-img" src="assets/img/team2.png" />
                                         <h3>Rachita</h3>
@@ -448,7 +448,7 @@ export default function HomePage() {
                                     </div>
                                 </div>
 
-                                <div className="col-md-3 col-sm-6 col-12">
+                                <div className="col-md-4 col-sm-6 col-12">
                                     <div className="team-medi-box">
                                         <img className="doc-img" src="assets/img/team4.png" />
                                         <h3>Mehul</h3>
@@ -464,7 +464,7 @@ export default function HomePage() {
                                     </div>
                                 </div>
 
-                                <div className="col-md-3 col-sm-6 col-12">
+                                <div className="col-md-4 col-sm-6 col-12">
                                     <div className="team-medi-box">
                                         <img className="doc-img" src="assets/img/team3.png" />
                                         <h3>Rashmi</h3>
@@ -479,7 +479,7 @@ export default function HomePage() {
                                     </div>
                                 </div>
 
-                                <div class="col-md-3 col-sm-6 col-12">
+                                <div class="col-md-4 col-sm-6 col-12">
                                     <div class="team-medi-box">
                                         <img class="doc-img" src="assets/img/team5.jpg" />
                                         <h3>Umanshi Agrawal</h3>
@@ -824,13 +824,13 @@ export default function HomePage() {
                             </div>
                             <div className="modal-body">
                                 <div class="row">
-                                    <div class="col-md-6" >
-                                        <button className='active' onClick={() => setJoinTab(1)}>
+                                    <div class="col-md-6 col-6" >
+                                        <button className={joinTab === 1 ? 'active' :''} onClick={() => setJoinTab(1)}>
                                             Doctor
                                         </button>
                                     </div>
-                                    <div class="col-md-6">
-                                        <button onClick={() => setJoinTab(2)}>
+                                    <div class="col-md-6 col-6">
+                                        <button className={joinTab === 2 ? 'active' :''} onClick={() => setJoinTab(2)}>
                                             Own a Center
                                         </button>
                                     </div>

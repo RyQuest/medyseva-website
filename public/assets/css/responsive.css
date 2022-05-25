@@ -292,6 +292,20 @@
     font-weight: 500;
     padding: 10px 0 0;
 }
+#join-form .modal-body button {
+    background: rgb(189, 210, 222);
+    text-align: center;
+    padding: 10px 0px;
+    color: black;
+    cursor: pointer;
+    width: 100%;
+    outline: none;
+    border: none;
+    font-size: 14px;
+}
+#join-form .modal-body .head-form {
+    margin: 30px 0 0;
+}
 
 }
 
@@ -497,6 +511,9 @@
     background-repeat: no-repeat;
     background-position: unset;
     text-align: center;
+}
+#join-form .modal-body .head-form {
+    margin: 30px 0 0;
 }
 
 }

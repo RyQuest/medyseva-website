@@ -1461,8 +1461,10 @@ background-image: url(../img/texture.png);
 }
 #contact-info .contact-form .input-field input[type="submit"]{
 max-width: 150px;
-background-color: #0754c0;
-;}
+background-color: var(--primary-color);
+color: #fff;
+text-transform: capitalize;
+}
 #contact-info .contact-form .input-field {
   margin-bottom: 20px;
 }
@@ -1726,12 +1728,12 @@ background-color: #0754c0;
 }
 
 #join-form .head-modal .title h3 {
-  color: rgb(77, 80, 154);
-  font-family: justified;
-  font-size: 40px;
-  margin: 0px auto;
-  text-align: center;
-  margin-bottom: 10px;
+    text-align: center;
+    font-size: 40px;
+    color: var(--primary-color);
+    font-family: var(--Montserrat);
+    font-weight: normal;
+    margin-bottom: 10px;
 }
 #join-form .head-modal .title p {
   color: rgb(87, 87, 87);
