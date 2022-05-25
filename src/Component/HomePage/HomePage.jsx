@@ -14,16 +14,22 @@ export default function HomePage() {
     const [joinTab, setJoinTab] = useState(1);
 
     const HandleDoctorSubmit = async (values) => {
-        // e.preventDefault();
-        console.log(values)
         const res = await axios.post(`http://api.medyseva.com/api/contact_us?contactus_type=${"doctor"}&doctor_name=${values.doctor_name}&doctor_email=${values.doctor_email}&doctor_number=${values.doctor_number}&doctor_specialization=${values.doctor_specialization}&center_name=${values.center_name}&center_phone_num=${values.center_phone_num}&center_address=${values.center_address}&center_email=${values.center_email}`)
-        console.log(res)
-        toast("Submitted successfully")
+            .then((res) => {
+                console.log(res);
+                toast(res.message)
+            }).catch((err) => {
+                toast(err.message);
+        })
     }
     const HandleCenterSubmit = async (values) => {
         const res = await axios.post(`http://api.medyseva.com/api/contact_us?contactus_type=${"center"}&doctor_name=${values.doctor_name}&doctor_email=${values.doctor_email}&doctor_number=${values.doctor_number}&doctor_specialization=${values.doctor_specialization}&center_name=${values.center_name}&center_phone_num=${values.center_phone_num}&center_address=${values.center_address}&center_email=${values.center_email}`)
-        console.log(res)
-        toast("Submitted successfully")
+            .then((res) => {
+                console.log(res);
+                toast(res.message)
+            }).catch((err) => {
+                toast(err.message);
+            })
 
     }
 
@@ -939,9 +945,6 @@ export default function HomePage() {
                                                                     <input type="text" name="center_name" value={values.center_name} placeholder='Enter Your Name' onChange={handleChange}
                                                                         onBlur={handleBlur}
                                                                     ></input>
-                                                                </div>
-                                                                <div className="error-message">
-                                                                    {errors.center_name && touched.center_name && errors.center_name}
                                                                 </div>
                                                             </div>
                                                            

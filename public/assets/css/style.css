@@ -1805,3 +1805,10 @@ background-color: #0754c0;
   margin-top: 2px;
   text-align: center;
 }
+
+.error-message1 {
+  color: #b90000;
+  padding-bottom: 15px;
+  padding-top: -10px;
+  text-align: center;
+}
