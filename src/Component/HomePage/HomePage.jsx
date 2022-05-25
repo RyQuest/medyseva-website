@@ -1,4 +1,3 @@
-import axios from 'axios';
 import React, { useState } from 'react'
 import Footer from '../Footer'
 import PageLayout from '../Layout/PageLayout'
@@ -7,6 +6,7 @@ import * as Yup from 'yup';
 import { Formik } from 'formik';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { axios } from '../../http';
 
 
 export default function HomePage() {
@@ -14,7 +14,7 @@ export default function HomePage() {
     const [joinTab, setJoinTab] = useState(1);
 
     const HandleDoctorSubmit = async (values) => {
-        const res = await axios.post(`http://api.medyseva.com/api/contact_us?contactus_type=${"doctor"}&doctor_name=${values.doctor_name}&doctor_email=${values.doctor_email}&doctor_number=${values.doctor_number}&doctor_specialization=${values.doctor_specialization}&center_name=${values.center_name}&center_phone_num=${values.center_phone_num}&center_address=${values.center_address}&center_email=${values.center_email}`)
+        const res = await axios.post(`api/contact_us?contactus_type=${"doctor"}&doctor_name=${values.doctor_name}&doctor_email=${values.doctor_email}&doctor_number=${values.doctor_number}&doctor_specialization=${values.doctor_specialization}&center_name=${values.center_name}&center_phone_num=${values.center_phone_num}&center_address=${values.center_address}&center_email=${values.center_email}`)
             .then((res) => {
                 console.log(res);
                 toast(res.message)
@@ -23,7 +23,7 @@ export default function HomePage() {
         })
     }
     const HandleCenterSubmit = async (values) => {
-        const res = await axios.post(`http://api.medyseva.com/api/contact_us?contactus_type=${"center"}&doctor_name=${values.doctor_name}&doctor_email=${values.doctor_email}&doctor_number=${values.doctor_number}&doctor_specialization=${values.doctor_specialization}&center_name=${values.center_name}&center_phone_num=${values.center_phone_num}&center_address=${values.center_address}&center_email=${values.center_email}`)
+        const res = await axios.post(`api/contact_us?contactus_type=${"center"}&doctor_name=${values.doctor_name}&doctor_email=${values.doctor_email}&doctor_number=${values.doctor_number}&doctor_specialization=${values.doctor_specialization}&center_name=${values.center_name}&center_phone_num=${values.center_phone_num}&center_address=${values.center_address}&center_email=${values.center_email}`)
             .then((res) => {
                 console.log(res);
                 toast(res.message)
@@ -39,6 +39,7 @@ export default function HomePage() {
         doctor_number: Yup.string()
             .trim()
             .min(10)
+            .max(10)
             .required("phone number is required"),
         doctor_specialization: Yup.string().required("specialization is required")
     })
@@ -48,6 +49,7 @@ export default function HomePage() {
         center_number: Yup.string()
             .trim()
             .min(10)
+            .max(10)
             .required("phone number is required"),
         center_address: Yup.string().required("Address is required")
     })

@@ -1,14 +1,12 @@
 import React from 'react'
 import { Formik } from 'formik';
 import * as Yup from 'yup';
-import { useState } from 'react';
 import axios from 'axios';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 
 function ContactUs() {
-    const [Data, setData] = useState("")
     const validationSchema = Yup.object({
         name: Yup.string().trim().required('Name is required'),
         email: Yup.string().email().typeError().required('E-mail id required'),
@@ -22,7 +20,7 @@ function ContactUs() {
 
     const submitting =async (values) => {
         // console.log(values);
-        const response = await axios.get(`http://api.medyseva.com/api/contact_us?name=${values.name}&email=${values.email}&number=${values.number}&message=${values.message}`)
+        const res = await axios.get(`http://api.medyseva.com/api/contact_us?name=${values.name}&email=${values.email}&number=${values.number}&message=${values.message}`)
             .then((res) => {
             console.log(res);
             toast(res.message)
@@ -32,7 +30,6 @@ function ContactUs() {
     }
     return (
         <>
-
             <section id="contact-info">
                 <div className="container">
                     <div className="row">
