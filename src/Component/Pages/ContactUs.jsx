@@ -20,14 +20,15 @@ function ContactUs() {
 
     const submitting =async (values) => {
         // console.log(values);
-        const res = await axios.get(`http://api.medyseva.com/api/contact_us?name=${values.name}&email=${values.email}&number=${values.number}&message=${values.message}`)
+        const res = await axios.post(`http://api.medyseva.com/api/contact_us?name=${values.name}&email=${values.email}&number=${values.number}&message=${values.message}`)
             .then((res) => {
             console.log(res);
-            toast(res.message)
+            toast(res.data.msg)
         }).catch((err) => {
             toast(err.message);
         })
     }
+
     return (
         <>
             <section id="contact-info">

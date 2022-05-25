@@ -16,8 +16,8 @@ export default function HomePage() {
     const HandleDoctorSubmit = async (values) => {
         const res = await axios.post(`api/contact_us?contactus_type=${"doctor"}&doctor_name=${values.doctor_name}&doctor_email=${values.doctor_email}&doctor_number=${values.doctor_number}&doctor_specialization=${values.doctor_specialization}&center_name=${values.center_name}&center_phone_num=${values.center_phone_num}&center_address=${values.center_address}&center_email=${values.center_email}`)
             .then((res) => {
-                console.log(res);
-                toast(res.message)
+                console.log(res.data.msg);
+                toast(res.data.msg)
             }).catch((err) => {
                 toast(err.message);
         })
@@ -25,8 +25,8 @@ export default function HomePage() {
     const HandleCenterSubmit = async (values) => {
         const res = await axios.post(`api/contact_us?contactus_type=${"center"}&doctor_name=${values.doctor_name}&doctor_email=${values.doctor_email}&doctor_number=${values.doctor_number}&doctor_specialization=${values.doctor_specialization}&center_name=${values.center_name}&center_phone_num=${values.center_phone_num}&center_address=${values.center_address}&center_email=${values.center_email}`)
             .then((res) => {
-                console.log(res);
-                toast(res.message)
+                console.log(res.data.msg);
+                toast(res.data.msg)
             }).catch((err) => {
                 toast(err.message);
             })
@@ -35,22 +35,22 @@ export default function HomePage() {
 
     const validationSchema = Yup.object({
         doctor_name: Yup.string().trim().required('Doctor name is required'),
-        doctor_email: Yup.string().email().typeError().required('e-mail id required'),
+        doctor_email: Yup.string().email().typeError().required('E-mail id required'),
         doctor_number: Yup.string()
             .trim()
             .min(10)
             .max(10)
-            .required("phone number is required"),
-        doctor_specialization: Yup.string().required("specialization is required")
+            .required("Phone number is required"),
+        doctor_specialization: Yup.string().required("Specialization is required")
     })
     const validationSchema1 = Yup.object({
         center_name: Yup.string().trim().required('Name is required'),
-        center_email: Yup.string().email().typeError().required('e-mail id required'),
+        center_email: Yup.string().email().typeError().required('E-mail id required'),
         center_number: Yup.string()
             .trim()
             .min(10)
             .max(10)
-            .required("phone number is required"),
+            .required("Phone number is required"),
         center_address: Yup.string().required("Address is required")
     })
 
@@ -947,6 +947,9 @@ export default function HomePage() {
                                                                     <input type="text" name="center_name" value={values.center_name} placeholder='Enter Your Name' onChange={handleChange}
                                                                         onBlur={handleBlur}
                                                                     ></input>
+                                                                    <div className="error-message">
+                                                                        {errors.center_name && touched.center_name && errors.center_name}
+                                                                    </div>
                                                                 </div>
                                                             </div>
                                                            
