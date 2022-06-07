@@ -137,9 +137,9 @@ function Header() {
                                         </ul>
                                     </div>
                                 </li>
-                                <li>
+                                {/* <li>
                                     <a href="#join-us">Join Us</a>
-                                </li>
+                                </li> */}
                                {/* <li>
                                     <a href=" ">Blogs</a>
                                 </li> */}

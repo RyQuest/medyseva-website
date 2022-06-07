@@ -303,7 +303,7 @@ export default function HomePage() {
                                                 <div className="h-100">
                                                     <div className="service-card">
                                                         <div className="card">
-                                                            <img src="assets/img/ser/three.jpg" className="card-img-top" alt="..." />
+                                                            <img src="assets/img/MedySeva1.jpg" className="card-img-top" alt="..." />
                                                             <div className="card-body">
                                                                 <h4>Home Care Service </h4>
                                                                 <p className="card-text">For patients who are advised bedrest or who need to stay at home for their long recovery process, we provide trained nurses and other care- takers.
@@ -488,7 +488,7 @@ export default function HomePage() {
                             <div className="row" style={{ justifyContent: "center" }}>
                                 <div className="col-md-4 col-sm-6 col-12">
                                     <div className="team-medi-box">
-                                        <img className="doc-img" src="assets/img/team4.png" />
+                                        <img className="doc-img" src="assets/img/Medyseva_Mehul (1).png" />
                                         <h3>MEHUL JAIN</h3>
                                         <h6>TECHNOLOGY</h6>
                                         <div className="other-info-box">
@@ -583,10 +583,10 @@ export default function HomePage() {
                                                     <div className="gallery-card">
                                                         <div className="card">
                                                             <img src="assets/img/gallery1.jpeg" className="card-img-top" alt="..." />
-                                                            <div className="card-body">
+                                                            {/* <div className="card-body">
                                                                 <h4>Medyseva</h4>
                                                                 <p className="card-text">Activity</p>
-                                                            </div>
+                                                            </div> */}
                                                         </div>
                                                     </div>
                                                 </div>
@@ -596,10 +596,10 @@ export default function HomePage() {
                                                     <div className="gallery-card">
                                                         <div className="card">
                                                             <img src="assets/img/gallery2.jpeg" className="card-img-top" alt="..." />
-                                                            <div className="card-body">
+                                                            {/* <div className="card-body">
                                                                 <h4>Medyseva</h4>
                                                                 <p className="card-text">Activity</p>
-                                                            </div>
+                                                            </div> */}
                                                         </div>
                                                     </div>
                                                 </div>
@@ -609,10 +609,10 @@ export default function HomePage() {
                                                     <div className="gallery-card">
                                                         <div className="card">
                                                             <img src="assets/img/gallery3.jpeg" className="card-img-top" alt="..." />
-                                                            <div className="card-body">
+                                                            {/* <div className="card-body">
                                                                 <h4>Medyseva</h4>
                                                                 <p className="card-text">Activity</p>
-                                                            </div>
+                                                            </div> */}
                                                         </div>
                                                     </div>
                                                 </div>
@@ -622,10 +622,10 @@ export default function HomePage() {
                                                     <div className="gallery-card">
                                                         <div className="card">
                                                             <img src="assets/img/gallery4.jpeg" className="card-img-top" alt="..." />
-                                                            <div className="card-body">
+                                                            {/* <div className="card-body">
                                                                 <h4>Medyseva</h4>
                                                                 <p className="card-text">Activity</p>
-                                                            </div>
+                                                            </div> */}
                                                         </div>
                                                     </div>
                                                 </div>
@@ -635,10 +635,10 @@ export default function HomePage() {
                                                     <div className="gallery-card">
                                                         <div className="card">
                                                             <img src="assets/img/gallery5.jpeg" className="card-img-top" alt="..." />
-                                                            <div className="card-body">
+                                                            {/* <div className="card-body">
                                                                 <h4>Medyseva</h4>
                                                                 <p className="card-text">Activity</p>
-                                                            </div>
+                                                            </div> */}
                                                         </div>
                                                     </div>
                                                 </div>
@@ -696,8 +696,10 @@ export default function HomePage() {
                         </div>
                     </section>
 
+                    <ContactUs />
 
 
+                    
                     <section id="download-apps">
                         <div className="container">
                             <div className="row">
@@ -723,8 +725,10 @@ export default function HomePage() {
                                         </ul>
                                     </div>
                                     <div className="store-icon">
-                                        <img src="assets/img/gp.png" />
-                                        <img src="assets/img/ap.png" />
+                                        <a target="_blank" href="https://www.practo.com/consult ">
+                                        <img src="assets/img/gp.png" /></a>
+                                        <a target="_blank" href="https://www.practo.com/providers/clinics/profile">
+                                        <img src="assets/img/ap.png" /></a>
                                     </div>
                                 </div>
                             </div>
@@ -733,11 +737,7 @@ export default function HomePage() {
                     </section>
 
 
-
-                    <ContactUs />
-
-
-                    <section className="joinus-medi-sec" id="join-us">
+                    {/* <section className="joinus-medi-sec" id="join-us">
                         <div className="container">
                             <div className="row">
                                 <div className="col-sm-12">
@@ -761,9 +761,6 @@ export default function HomePage() {
                                         <p>
                                             <a href><i className="fas fa-envelope" /> &nbsp; info@medyseva.com</a>
                                         </p>
-                                        {/* <h5>Doctors can download our App</h5>
-                      <a style="text-decoration: none;" href="https://www.practo.com/consult" target="_blank"><h4 class="mb-0"> https://www.practo.com/consult</h4></a>
-                      <a style="text-decoration: none;" href="https://www.practo.com/providers/clinics/profile" target="_blank"><h4 class="mb-5"> https://www.practo.com/providers/clinics/profile</h4></a> */}
                                         <div className="btn1">
                                             <a className='text-white' data-bs-toggle="modal" data-bs-target="#join-form">Apply Now</a>
                                         </div>
@@ -772,7 +769,10 @@ export default function HomePage() {
                             </div>
                         </div>
 
-                    </section>
+                    </section> */}
+                                        {/* <h5>Doctors can download our App</h5>
+                      <a style="text-decoration: none;" href="https://www.practo.com/consult" target="_blank"><h4 class="mb-0"> https://www.practo.com/consult</h4></a>
+                      <a style="text-decoration: none;" href="https://www.practo.com/providers/clinics/profile" target="_blank"><h4 class="mb-5"> https://www.practo.com/providers/clinics/profile</h4></a> */}
 
                 </div>
 
