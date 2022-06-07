@@ -1094,6 +1094,9 @@ background-image: url(../img/texture.png);
   padding-top: 80px;
   margin: 70px 0 20px;
 }
+.newbox1{
+  height: 238px;
+}
 .team-medi-box .doc-img {
   position: absolute;
   top: -60px;
@@ -1116,8 +1119,8 @@ background-image: url(../img/texture.png);
   text-align: center;
   position: relative;
   font-weight: bold;
-  /* color: #063579; */
-  color: rgb(245, 56, 56);
+  color: #063579;
+  /* color: rgb(245, 56, 56); */
   margin-bottom: 20px;
   font-size: 12px;
   margin-top: 15px;

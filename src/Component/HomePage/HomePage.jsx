@@ -20,7 +20,7 @@ export default function HomePage() {
                 toast(res.data.msg)
             }).catch((err) => {
                 toast(err.message);
-        })
+            })
     }
     const HandleCenterSubmit = async (values) => {
         const res = await axios.post(`api/contact_us?contactus_type=${"center"}&doctor_name=${values.doctor_name}&doctor_email=${values.doctor_email}&doctor_number=${values.doctor_number}&doctor_specialization=${values.doctor_specialization}&center_name=${values.center_name}&center_phone_num=${values.center_phone_num}&center_address=${values.center_address}&center_email=${values.center_email}`)
@@ -121,10 +121,10 @@ export default function HomePage() {
                                         <div className="container">
                                             <div className="header-content">
                                                 <div className="head">
-                                                    <h2>We are supporting National<br/> Digital Health Mission</h2>
+                                                    <h2>We are supporting National<br /> Digital Health Mission</h2>
                                                     {/* <p> We are supporting National Digital Health Mission</p> */}
-                                                    <p>Medyseva will soon be a part of ABHA, a Government initiative for creating <br/>India’s Digital Health Ecosystem
-</p>
+                                                    <p>Medyseva will soon be a part of ABHA, a Government initiative for creating <br />India’s Digital Health Ecosystem
+                                                    </p>
                                                 </div>
                                             </div>
                                         </div>
@@ -237,8 +237,8 @@ export default function HomePage() {
                                                             <img src="assets/img/ser/one.jpg" className="card-img-top" alt="..." />
                                                             <div className="card-body">
                                                                 <h4>Consultation</h4>
-                                                                <p className="card-text">India’s best doctors across various specialties provide video consultation at affordable prices on the Medyseva platform. 
-</p>
+                                                                <p className="card-text">India’s best doctors across various specialties provide video consultation at affordable prices on the Medyseva platform.
+                                                                </p>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -252,7 +252,7 @@ export default function HomePage() {
                                                             <div className="card-body">
                                                                 <h4>Pathology</h4>
                                                                 <p className="card-text">Samples are collected at our centers and tested at our local associated labs. The patient does not need to deliver samples or collect reports himself.
-</p>
+                                                                </p>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -279,7 +279,7 @@ export default function HomePage() {
                                                             <div className="card-body">
                                                                 <h4>Hospitalization</h4>
                                                                 <p className="card-text">For a patient who needs to be hospitalized, Medyseva assists the patient in transportation facilities to the nearest associated hospital and through the formalities and processes of the admission.
-</p>
+                                                                </p>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -292,8 +292,8 @@ export default function HomePage() {
                                                             <img src="assets/img/image_2022_05_12T13_39_41_049Z.png" className="card-img-top" alt="..." />
                                                             <div className="card-body">
                                                                 <h4>Ambulance</h4>
-                                                                <p className="card-text">We provide ambulance service for patients who need to go to our associated or any other hospital. 
-</p>
+                                                                <p className="card-text">We provide ambulance service for patients who need to go to our associated or any other hospital.
+                                                                </p>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -307,7 +307,7 @@ export default function HomePage() {
                                                             <div className="card-body">
                                                                 <h4>Home Care Service </h4>
                                                                 <p className="card-text">For patients who are advised bedrest or who need to stay at home for their long recovery process, we provide trained nurses and other care- takers.
-</p>
+                                                                </p>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -404,22 +404,22 @@ export default function HomePage() {
                                 </div>
                                 <div className="col-lg-3 stats col-6">
                                     <img src="assets/img/counter/one.png" />
-                                    <div className="counting" data-count={520} id="plus">0</div>
+                                    <div className="counting" data-count={2500} id="plus">0</div>
                                     <h5>CONSULTATIONS</h5>
                                 </div>
                                 <div className="col-lg-3 stats col-6">
                                     <img src="assets/img/counter/two.png" />
-                                    <div className="counting" data-count={425} id="plus">0</div>
+                                    <div className="counting" data-count={23} id="plus">0</div>
                                     <h5>SPECIALTIES COVERED</h5>
                                 </div>
                                 <div className="col-lg-3 stats col-6">
                                     <img src="assets/img/counter/three.png" />
-                                    <div className="counting" data-count={65} id="plus">0</div>
+                                    <div className="counting" data-count={200} id="plus">0</div>
                                     <h5>DOCTORS ON BOARD</h5>
                                 </div>
                                 <div className="col-lg-3 stats col-6">
                                     <img src="assets/img/counter/four.png" />
-                                    <div className="counting" data-count={20} id="plus">0</div>
+                                    <div className="counting" data-count={15} id="plus">0</div>
                                     <h5>MEDYSEVA KENDRA</h5>
                                 </div>
                             </div>
@@ -441,7 +441,7 @@ export default function HomePage() {
                                     <div className="team-medi-box">
                                         <img className="doc-img" src="assets/img/team1.png" />
                                         <h3>DR.ViSHESH KASLIWAL</h3>
-                                        <h6 style={{color:"",fontWeight:"bold"}}>FOUNDER/CEO</h6>
+                                        <h6 style={{ color: "", fontWeight: "bold" }}>FOUNDER/CEO</h6>
                                         <div className="other-info-box">
                                             <p>MBBS, MBA, DEM</p>
                                             <p>10+ years experience in healthcare</p>
@@ -456,7 +456,7 @@ export default function HomePage() {
                                     <div className="team-medi-box">
                                         <img className="doc-img" src="assets/img/team2.png" />
                                         <h3>RACHITA KASLIWAL</h3>
-                                        <h6>Co-Founder/Marketing</h6>
+                                        <h6>CO-FOUNDER/MARKETING</h6>
                                         <div className="other-info-box">
                                             <p>B.COM(H), MBA</p>
                                             <p>Experience in healthcare and education</p>
@@ -467,12 +467,30 @@ export default function HomePage() {
                                         </div>
                                     </div>
                                 </div>
+                                <div className="col-md-4 col-sm-6 col-12">
+                                    <div className="team-medi-box">
+                                        <img className="doc-img" src="assets/img/team3.png" />
+                                        <h3>DR.RASHMI PATIDAR</h3>
+                                        <h6>CHIFE MEDICAL OFFICER</h6>
+                                        <div className="other-info-box">
+                                            <p>MBBS, MD(Pathology)</p>
+                                            <p>10+ years experience in healthcare</p>
+                                        </div>
+                                        <div className="text-center">
+                                            <a href="https://www.linkedin.com/in/dr-rashmi-patidar-367398238/" target={'_blank'}><img src="assets/img/in.png" /></a>
+                                        </div>
+                                    </div>
+                                </div>
 
+
+
+                            </div>
+                            <div className="row" style={{ justifyContent: "center" }}>
                                 <div className="col-md-4 col-sm-6 col-12">
                                     <div className="team-medi-box">
                                         <img className="doc-img" src="assets/img/team4.png" />
-                                        <h3>Mehul</h3>
-                                        <h6>Technology Head</h6>
+                                        <h3>MEHUL JAIN</h3>
+                                        <h6>TECHNOLOGY</h6>
                                         <div className="other-info-box">
                                             <p>B.E.,MBA</p>
                                             <p>10+ years experience in IT</p>
@@ -484,26 +502,11 @@ export default function HomePage() {
                                     </div>
                                 </div>
 
-                                <div className="col-md-4 col-sm-6 col-12">
-                                    <div className="team-medi-box">
-                                        <img className="doc-img" src="assets/img/team3.png" />
-                                        <h3>Rashmi</h3>
-                                        <h6>Chief Medical Officer</h6>
-                                        <div className="other-info-box">
-                                            <p>MBBS, MD(Pathology)</p>
-                                            <p>10+ years experience in healthcare</p>
-                                        </div>
-                                        <div className="text-center">
-                                            <a href="https://www.linkedin.com/in/dr-rashmi-patidar-367398238/" target={'_blank'}><img src="assets/img/in.png" /></a>
-                                        </div>
-                                    </div>
-                                </div>
-
                                 <div class="col-md-4 col-sm-6 col-12">
                                     <div class="team-medi-box">
                                         <img class="doc-img" src="assets/img/team5.jpg" />
-                                        <h3>Umanshi Agrawal</h3>
-                                        <h6>Finance</h6>
+                                        <h3>UMANSHI AGRAWAL</h3>
+                                        <h6>FINANCE</h6>
                                         <div class="other-info-box">
                                             <p>B.COM, CA</p>
                                             <p>5+ years experience in Taxation, Finance</p>
@@ -531,29 +534,32 @@ export default function HomePage() {
                                 <div className="col-sm-3">
                                     <div className="team-medi-box">
                                         <img className="doc-img" src="assets/img/advisor1.png" />
-                                        <h3>Dr Rajesh Kasliwal</h3>
-                                        <h6>Manging Director Vishesh Jupiter, Indore</h6>
+                                        <h3>Dr. Rajesh Kasliwal</h3>
+                                        <h6>Managing Director Vishesh Jupiter Hospital, Indore
+                                        </h6>
                                     </div>
                                 </div>
                                 <div className="col-sm-3">
                                     <div className="team-medi-box">
                                         <img className="doc-img" src="assets/img/advisor2.png" />
-                                        <h3>Mr Ajay Jai</h3>
-                                        <h6>IIT Khargpur Alumnus, Director CN group of companies, Ranchi</h6>
+                                        <h3>Mr. Ajay Jain</h3>
+                                        <h6>Director - CN group of Companies, Ranchi IIT Kharagpur Alumnus
+                                        </h6>
                                     </div>
                                 </div>
                                 <div className="col-sm-3">
-                                    <div className="team-medi-box">
+                                    <div className="team-medi-box newbox1">
                                         <img className="doc-img" src="assets/img/advisor3.png" />
-                                        <h3>Vasundhara Shukla</h3>
+                                        <h3>Ms.Vasundhara Shukla</h3>
                                         <h6>Strategic consultant for healthcare startups.</h6>
                                     </div>
                                 </div>
                                 <div className="col-sm-3">
                                     <div className="team-medi-box">
                                         <img className="doc-img" src="assets/img/advisor4.png" />
-                                        <h3>Dinesh jain</h3>
-                                        <h6>a company secretory having 19 + years in finance sector, mentoring and guiding startups since many years</h6>
+                                        <h3>Mr. Dinesh Jain</h3>
+                                        <h6>A company secretary having 19 + years in finance sector, mentoring and guiding startups since many years
+                                        </h6>
                                     </div>
                                 </div>
                             </div>
@@ -786,11 +792,16 @@ export default function HomePage() {
 
                                     <p>Like many startup stories, our journey too began during the Covid pandemic. We realized that our friends and relatives in rural areas did not have access to good doctors and were unaware of or uncomfortable with mobile apps. That is when Medyseva was born, providing video consultation through our phygital centers – an ideal mix of online and offline. In July 2021, we launched two Medyseva Kendras in Madhya Pradesh and since then have been expanding our reach across Central India.</p>
 
-                                    <p style={{fontWeight:"bold"}}><span>Mission: </span>To ensure that every rural citizen of India has access to high quality doctors and medical services at their convenience and at affordable prices.</p>
+                                    <p ><span>Mission: </span>To ensure that every rural citizen of India has access to high quality doctors and medical services at their convenience and at affordable prices.</p>
 
-                                    <p style={{fontWeight:"bold"}}><span>Vision:</span> To be the nearest, affordable and the most reliable healthcare destination for the rural citizens of India.</p>
+                                    <p ><span>Vision:</span> To be the nearest, affordable and the most reliable healthcare destination for the rural citizens of India.</p>
+                                    <p ><span>Awards received: </span><br/>
+                                        ⦁	Global Hackathon conducted by MERI College, Delhi<br/>
+                                        ⦁	Global Entrepreneur summit 2022 conducted by Jai Hind College, Mumbai.<br/>
+                                        ⦁	Heart Pitch competition conducted by TiE MP<br/>
+                                        ⦁	Hubli TiECON Business Pitch Competition<br/>
+                                    </p>
 
-                                    
                                 </div>
                             </div>
                         </div>
@@ -847,12 +858,12 @@ export default function HomePage() {
                             <div className="modal-body">
                                 <div class="row">
                                     <div class="col-md-6 col-6" >
-                                        <button className={joinTab === 1 ? 'active' :''} onClick={() => setJoinTab(1)}>
+                                        <button className={joinTab === 1 ? 'active' : ''} onClick={() => setJoinTab(1)}>
                                             Doctor
                                         </button>
                                     </div>
                                     <div class="col-md-6 col-6">
-                                        <button className={joinTab === 2 ? 'active' :''} onClick={() => setJoinTab(2)}>
+                                        <button className={joinTab === 2 ? 'active' : ''} onClick={() => setJoinTab(2)}>
                                             Own a Center
                                         </button>
                                     </div>
@@ -974,7 +985,7 @@ export default function HomePage() {
                                                                     </div>
                                                                 </div>
                                                             </div>
-                                                           
+
                                                             <div className="col-md-12">
                                                                 <div className="input-field">
                                                                     <span>Phone Number</span>
@@ -1028,7 +1039,7 @@ export default function HomePage() {
 
                 <Footer />
             </div>
-            <ToastContainer/>
+            <ToastContainer />
         </>
     )
 };

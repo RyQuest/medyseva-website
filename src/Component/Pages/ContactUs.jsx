@@ -108,7 +108,7 @@ function ContactUs() {
                                                                     <li id='7' > Job Seeker</li>
                                                                 </ul>
                                                             </div> */}
-                                                            <input list="details" id="myBrowser" placeholder='Patient' name="message" onChange={handleChange}
+                                                            <input list="details" id="myBrowser" placeholder='I am a' name="message" onChange={handleChange}
                                                                 onBlur={handleBlur} />
                                                             <datalist id="details">
                                                                 <option value="Patient" />
