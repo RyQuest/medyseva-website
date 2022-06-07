@@ -2,20 +2,63 @@ import React, { useState } from 'react'
 import Footer from '../Footer'
 import PageLayout from '../Layout/PageLayout'
 import ContactUs from '../Pages/ContactUs'
+import * as Yup from 'yup';
+import { Formik } from 'formik';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { axios } from '../../http';
+
 
 export default function HomePage() {
 
     const [joinTab, setJoinTab] = useState(1);
 
+    const HandleDoctorSubmit = async (values) => {
+        const res = await axios.post(`api/contact_us?contactus_type=${"doctor"}&doctor_name=${values.doctor_name}&doctor_email=${values.doctor_email}&doctor_number=${values.doctor_number}&doctor_specialization=${values.doctor_specialization}&center_name=${values.center_name}&center_phone_num=${values.center_phone_num}&center_address=${values.center_address}&center_email=${values.center_email}`)
+            .then((res) => {
+                console.log(res.data.msg);
+                toast(res.data.msg)
+            }).catch((err) => {
+                toast(err.message);
+        })
+    }
+    const HandleCenterSubmit = async (values) => {
+        const res = await axios.post(`api/contact_us?contactus_type=${"center"}&doctor_name=${values.doctor_name}&doctor_email=${values.doctor_email}&doctor_number=${values.doctor_number}&doctor_specialization=${values.doctor_specialization}&center_name=${values.center_name}&center_phone_num=${values.center_phone_num}&center_address=${values.center_address}&center_email=${values.center_email}`)
+            .then((res) => {
+                console.log(res.data.msg);
+                toast(res.data.msg)
+            }).catch((err) => {
+                toast(err.message);
+            })
+
+    }
+
+    const validationSchema = Yup.object({
+        doctor_name: Yup.string().trim().required('Doctor name is required'),
+        doctor_email: Yup.string().email().typeError().required('E-mail id required'),
+        doctor_number: Yup.string()
+            .trim()
+            .min(10)
+            .max(10)
+            .required("Phone number is required"),
+        doctor_specialization: Yup.string().required("Specialization is required")
+    })
+    const validationSchema1 = Yup.object({
+        center_name: Yup.string().trim().required('Name is required'),
+        center_email: Yup.string().email().typeError().required('E-mail id required'),
+        center_number: Yup.string()
+            .trim()
+            .min(10)
+            .max(10)
+            .required("Phone number is required"),
+        center_address: Yup.string().required("Address is required")
+    })
+
     return (
         <>
             <div >
                 <PageLayout />
-
-
                 <div>
-
-
                     <section id="banner-slider">
                         <div className="top-banner-slider">
                             <div className="owl-carousel">
@@ -101,7 +144,7 @@ export default function HomePage() {
                                         </div>
                                     </div>
                                     <div className="des">
-                                        <h2>About <span>Us</span></h2>
+                                        <h2>About Us</h2>
                                         <p>Medyseva is a healthcare startup focusing on Telemedicine in Rural India. It seeks to become the ultimate healthcare partner of all citizens such that they can get access to high quality healthcare services with ease and at affordable prices. It bridges the gap between the urban doctors and rural patients through Medyseva Kendras having state-of-the-art technology, which cover the entire spectrum of services that are needed to keep one healthy - from having virtual consultations to getting surgeries, from booking diagnostic tests to digitizing medical records.</p>
                                         <div className="col-md-12">
                                             <div className="btn1">
@@ -241,7 +284,7 @@ export default function HomePage() {
                                                 <div className="h-100">
                                                     <div className="service-card">
                                                         <div className="card">
-                                                            <img src="assets/img/ser/one.jpg" className="card-img-top" alt="..." />
+                                                            <img src="assets/img/image_2022_05_12T13_39_41_049Z.png" className="card-img-top" alt="..." />
                                                             <div className="card-body">
                                                                 <h4>Ambulance</h4>
                                                                 <p className="card-text">We provide ambulance service for patients who need to go to our associated or any other hospital. </p>
@@ -373,10 +416,8 @@ export default function HomePage() {
                                 </div>
                             </div>
 
-
-
                             <div className="row">
-                                <div className="col-md-3 col-sm-6 col-12">
+                                <div className="col-md-4 col-sm-6 col-12">
                                     <div className="team-medi-box">
                                         <img className="doc-img" src="assets/img/team1.png" />
                                         <h3>Vishesh</h3>
@@ -391,7 +432,7 @@ export default function HomePage() {
                                         </div>
                                     </div>
                                 </div>
-                                <div className="col-md-3 col-sm-6 col-12">
+                                <div className="col-md-4 col-sm-6 col-12">
                                     <div className="team-medi-box">
                                         <img className="doc-img" src="assets/img/team2.png" />
                                         <h3>Rachita</h3>
@@ -407,7 +448,7 @@ export default function HomePage() {
                                     </div>
                                 </div>
 
-                                <div className="col-md-3 col-sm-6 col-12">
+                                <div className="col-md-4 col-sm-6 col-12">
                                     <div className="team-medi-box">
                                         <img className="doc-img" src="assets/img/team4.png" />
                                         <h3>Mehul</h3>
@@ -423,7 +464,7 @@ export default function HomePage() {
                                     </div>
                                 </div>
 
-                                <div className="col-md-3 col-sm-6 col-12">
+                                <div className="col-md-4 col-sm-6 col-12">
                                     <div className="team-medi-box">
                                         <img className="doc-img" src="assets/img/team3.png" />
                                         <h3>Rashmi</h3>
@@ -438,8 +479,7 @@ export default function HomePage() {
                                     </div>
                                 </div>
 
-
-                                <div class="col-md-3 col-sm-6 col-12">
+                                <div class="col-md-4 col-sm-6 col-12">
                                     <div class="team-medi-box">
                                         <img class="doc-img" src="assets/img/team5.jpg" />
                                         <h3>Umanshi Agrawal</h3>
@@ -454,12 +494,7 @@ export default function HomePage() {
                                         </div>
                                     </div>
                                 </div>
-
-
-
                             </div>
-
-
                         </div>
                     </section>
 
@@ -717,7 +752,7 @@ export default function HomePage() {
 
 
                 <div className="modal fade" id="about-us" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div className="modal-dialog modal-dialog-centered">
+                    <div className="modal-dialog modal-dialog-centered" id='aboutUs_modal'>
                         <div className="modal-content">
                             <div className="modal-header">
                                 <h5 className="modal-title" id="exampleModalLabel">About Us</h5>
@@ -725,26 +760,15 @@ export default function HomePage() {
                             </div>
                             <div className="modal-body">
                                 <div className="content-des">
-                                    <p>Medyseva has identified several problems faced by the people in small towns and villages, pertaining to healthcare, and seeks to solve most of them in the short run.</p>
-                                    <p>Problem: Though there are doctors available in rural areas, but they are mostly general physicians. There is a dearth of specialists.</p>
+                                    <p><span>Medyseva</span> is a healthcare startup focusing on Telemedicine in Rural India. It seeks to become the ultimate healthcare partner of all citizens such that they can get access to high quality healthcare services with ease and at affordable prices. It bridges the gap between the urban doctors and rural patients through Medyseva Kendras having state-of-the-art technology, which cover the entire spectrum of services that are needed to keep one healthy - from having virtual consultations to getting surgeries, from booking diagnostic tests to digitizing medical records.</p>
 
-                                    <p><span>Our Solution</span>: Medyseva connects people in rural areas to specialists residing in urban areas via teleconferencing. In this way, people do not need to travel to far off places to get a medical treatment. Also, many people do not have much knowledge about who to consult and how to go about the process. Medyseva eliminates all such hassles and directly connects the people to excellent doctors in each field.</p>
+                                    <p>Citizens in rural India face many challenges when it comes to medical treatment. They have to either spend a lot of money and time going to nearby cities for treatment or fall back on local doctors who may be unqualified/ underqualified. They might not be comfortable with mobile apps. Medyseva helps them to overcome these problems.</p>
 
-                                    <p><span>Problem:</span> Though rural areas have small laboratories; they are usually not up to the standards. Their reports may not always be reliable as their processes and machines are not updated frequently. In many cases, people might have to send their samples to the nearest city and may have to wait a couple of days to get their reports.</p>
+                                    <p>Like many startup stories, our journey too began during the Covid pandemic. We realized that our friends and relatives in rural areas did not have access to good doctors and were unaware of or uncomfortable with mobile apps. That is when Medyseva was born, providing video consultation through our phygital centers – an ideal mix of online and offline. In July 2021, we launched two Medyseva Kendras in Madhya Pradesh and since then have been expanding our reach across Central India.</p>
 
-                                    <p><span>Our Solution:</span> We have collaborations with nationally recognized laboratories so that people do not have to worry about the quality. But most importantly, the samples are collected at our e-clinics itself which means that the patients neither need to travel nor do they need to wait long for their reports.</p>
+                                    <p><span>Mission: </span>To ensure that every rural citizen of India has access to high quality doctors and medical services at their convenience and at affordable prices.</p>
 
-                                    <p><span>Problem:</span> There is a scarcity of hospitals in rural areas. The hospitals which are there are not well-equipped to handle major ailments.</p>
-
-                                    <p><span>Our Solution:</span> Medyseva has an ambulance service which will take care of the transportation of patients to the best hospitals in the nearest city, with which it already has a tie-up.</p>
-
-                                    <p><span>Problem:</span> People in rural India cannot afford expensive consultations and treatment plans.</p>
-
-                                    <p><span>Our Solution:</span> Our consultation fee is Rs. 100 with a general physician (first consultation) and Rs. 400 if there is a requirement to consult a specialist. Our doctors prescribe generic medicines as far as possible. Even the prices of our diagnostic tests are quite reasonable along with the assurance and quality of reporting.</p>
-
-                                    <p><span>Problem:</span> People in rural India are not well-versed with the use of technology.</p>
-
-                                    <p><span>Our Solution:</span> Medyseva's e-clinics are run by trained 'Medyprenur' (medical entrepreneurs) who are like mediators between specialist doctors and patients. They are owners of these centers. They are trained to take the vital stats required for diagnosis (like Temperature, Respiratory Rate, BP, pulse) and then accordingly guide patients through their medical journey at Medyseva. They assist the patients throughout the process so that even those who are not very comfortable with technology do not find it difficult.</p>
+                                    <p><span>Vision:</span> To be the nearest, affordable and the most reliable healthcare destination for the rural citizens of India.</p>
                                 </div>
                             </div>
                         </div>
@@ -800,82 +824,177 @@ export default function HomePage() {
                             </div>
                             <div className="modal-body">
                                 <div class="row">
-                                    <div class="col-md-6" >
-                                        <button className='active' onClick={() => setJoinTab(1)}>
+                                    <div class="col-md-6 col-6" >
+                                        <button className={joinTab === 1 ? 'active' :''} onClick={() => setJoinTab(1)}>
                                             Doctor
                                         </button>
                                     </div>
-                                    <div class="col-md-6">
-                                        <button onClick={() => setJoinTab(2)}>
+                                    <div class="col-md-6 col-6">
+                                        <button className={joinTab === 2 ? 'active' :''} onClick={() => setJoinTab(2)}>
                                             Own a Center
                                         </button>
                                     </div>
                                     <div class="col-md-12">
                                         {joinTab === 1 && <div className='head-form'>
-                                            <div className="row">
-                                                <div className="col-md-12">
-                                                    <div className="input-field">
-                                                        <span>Doctor Name</span>
-                                                        <input type="" name="first_name" required="" value="" placeholder='Enter Your Name'></input>
+                                            <Formik
+                                                enableReinitialize
+                                                initialValues={{
+                                                    contactus_type: "doctor",
+                                                    doctor_name: "",
+                                                    doctor_email: "",
+                                                    doctor_number: "",
+                                                    doctor_specialization: "",
+                                                }}
+                                                validationSchema={validationSchema}
+                                                onSubmit={(values) => {
+                                                    console.log(values);
+                                                    HandleDoctorSubmit(values);
+                                                }}
+                                            >
+                                                {({
+                                                    values,
+                                                    errors,
+                                                    touched,
+                                                    handleChange,
+                                                    handleBlur,
+                                                    handleSubmit,
+                                                }) => (
+                                                    <div className="row">
+                                                        <form onSubmit={handleSubmit}>
+                                                            <div className="col-md-12">
+                                                                <div className="input-field">
+                                                                    <span>Doctor Name</span>
+                                                                    <input type="text" name="doctor_name" value={values.doctor_name} placeholder='Enter Your Name' onChange={handleChange}
+                                                                        onBlur={handleBlur}
+                                                                    ></input>
+                                                                </div>
+                                                                <div className="error-message">
+                                                                    {errors.doctor_name && touched.doctor_name && errors.doctor_name}
+                                                                </div>
+                                                            </div>
+                                                            <div className="col-md-12">
+                                                                <div className="input-field">
+                                                                    <span>Specialization</span>
+                                                                    <input type="text" name="doctor_specialization" value={values.doctor_specialization} placeholder='Enter Specialization' onChange={handleChange}
+                                                                        onBlur={handleBlur}
+                                                                    ></input>
+                                                                </div>
+                                                                <div className="error-message">
+                                                                    {errors.doctor_specialization && touched.doctor_specialization && errors.doctor_specialization}
+                                                                </div>
+                                                            </div>
+                                                            <div className="col-md-12">
+                                                                <div className="input-field">
+                                                                    <span>Contact Number</span>
+                                                                    <input type="number" name="doctor_number" value={values.doctor_number} placeholder='Enter Your Number' onChange={handleChange}
+                                                                        onBlur={handleBlur}
+                                                                    ></input>
+                                                                    <div className="error-message">
+                                                                        {errors.doctor_number && touched.doctor_number && errors.doctor_number}
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div className="col-md-12">
+                                                                <div className="input-field">
+                                                                    <span>Email</span>
+                                                                    <input type="email" name="doctor_email" value={values.doctor_email} placeholder='Enter Your Email' onChange={handleChange}
+                                                                        onBlur={handleBlur}
+                                                                    ></input>
+                                                                    <div className="error-message">
+                                                                        {errors.doctor_email && touched.doctor_email && errors.doctor_email}
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div className="col-md-12">
+                                                                <div className="input-field d-flex justify-content-center">
+                                                                    <input type="submit" value="submit" ></input>
+                                                                </div>
+                                                            </div>
+                                                        </form>
                                                     </div>
-                                                </div>
-                                                <div className="col-md-12">
-                                                    <div className="input-field">
-                                                        <span>Specialization</span>
-                                                        <input type="" name="first_name" required="" value="" placeholder='Enter Specialization'></input>
-                                                    </div>
-                                                </div>
-                                                <div className="col-md-12">
-                                                    <div className="input-field">
-                                                        <span>Contact Number</span>
-                                                        <input type="" name="first_name" required="" value="" placeholder='Enter Your Number'></input>
-                                                    </div>
-                                                </div>
-                                                <div className="col-md-12">
-                                                    <div className="input-field">
-                                                        <span>Email</span>
-                                                        <input type="" name="first_name" required="" value="" placeholder='Enter Your Email'></input>
-                                                    </div>
-                                                </div>
-                                                <div className="col-md-12">
-                                                    <div className="input-field">
-                                                        <input type="submit" value="Submit"></input>
-                                                    </div>
-                                                </div>
-                                            </div>
+                                                )}
+                                            </Formik>
                                         </div>}
                                         {joinTab === 2 && <div className='head-form'>
-                                            <div className="row">
-                                                <div className="col-md-12">
-                                                    <div className="input-field">
-                                                        <span>Name</span>
-                                                        <input type="" name="first_name" required="" value="" placeholder='Enter Your Name'></input>
+                                            <Formik
+                                                enableReinitialize
+                                                initialValues={{
+                                                    contactus_type: "center",
+                                                    center_name: "",
+                                                    center_email: "",
+                                                    center_number: "",
+                                                    center_address: "",
+                                                }}
+                                                validationSchema={validationSchema1}
+                                                onSubmit={(values) => {
+                                                    console.log(values);
+                                                    HandleCenterSubmit(values);
+                                                }}
+                                            >
+                                                {({
+                                                    values,
+                                                    errors,
+                                                    touched,
+                                                    handleChange,
+                                                    handleBlur,
+                                                    handleSubmit,
+                                                }) => (
+                                                    <div className="row">
+                                                        <form onSubmit={handleSubmit}>
+                                                            <div className="col-md-12">
+                                                                <div className="input-field">
+                                                                    <span> Name</span>
+                                                                    <input type="text" name="center_name" value={values.center_name} placeholder='Enter Your Name' onChange={handleChange}
+                                                                        onBlur={handleBlur}
+                                                                    ></input>
+                                                                    <div className="error-message">
+                                                                        {errors.center_name && touched.center_name && errors.center_name}
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                           
+                                                            <div className="col-md-12">
+                                                                <div className="input-field">
+                                                                    <span>Phone Number</span>
+                                                                    <input type="number" name="center_number" value={values.center_number} placeholder='Enter Your Number' onChange={handleChange}
+                                                                        onBlur={handleBlur}
+                                                                    ></input>
+                                                                    <div className="error-message">
+                                                                        {errors.center_number && touched.center_number && errors.center_number}
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div className="col-md-12">
+                                                                <div className="input-field">
+                                                                    <span>Address </span>
+                                                                    <input type="text" name="center_address" value={values.center_address} placeholder='Enter Your Address' onChange={handleChange}
+                                                                        onBlur={handleBlur}
+                                                                    ></input>
+                                                                    <div className="error-message">
+                                                                        {errors.center_address && touched.center_address && errors.center_address}
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div className="col-md-12">
+                                                                <div className="input-field">
+                                                                    <span>Email</span>
+                                                                    <input type="email" name="center_email" value={values.center_email} placeholder='Enter Your Email' onChange={handleChange}
+                                                                        onBlur={handleBlur}
+                                                                    ></input>
+                                                                    <div className="error-message">
+                                                                        {errors.center_email && touched.center_email && errors.center_email}
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div className="col-md-12">
+                                                                <div className="input-field d-flex justify-content-center">
+                                                                    <input type="submit" value="submit" ></input>
+                                                                </div>
+                                                            </div>
+                                                        </form>
                                                     </div>
-                                                </div>
-                                                <div className="col-md-12">
-                                                    <div className="input-field">
-                                                        <span>Phone Number</span>
-                                                        <input type="" name="first_name" required="" value="" placeholder='Enter Your Number'></input>
-                                                    </div>
-                                                </div>
-                                                <div className="col-md-12">
-                                                    <div className="input-field">
-                                                        <span>Address</span>
-                                                        <input type="" name="first_name" required="" value="" placeholder='Enter Your Address'></input>
-                                                    </div>
-                                                </div>
-                                                <div className="col-md-12">
-                                                    <div className="input-field">
-                                                        <span>Email</span>
-                                                        <input type="" name="first_name" required="" value="" placeholder='Enter Your Email'></input>
-                                                    </div>
-                                                </div>
-                                                <div className="col-md-12">
-                                                    <div className="input-field">
-                                                        <input type="submit" value="Submit"></input>
-                                                    </div>
-                                                </div>
-                                            </div>
+                                                )}
+                                            </Formik>
                                         </div>}
                                     </div>
                                 </div>
@@ -887,6 +1006,7 @@ export default function HomePage() {
 
                 <Footer />
             </div>
+            <ToastContainer/>
         </>
     )
 };
