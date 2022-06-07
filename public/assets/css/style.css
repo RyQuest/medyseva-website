@@ -208,7 +208,7 @@ header .header .navs > ul > li > a {
   text-decoration: none;
   display: inline-flex;
   align-items: center;
-  font-size: 16px;
+  font-size: 20px;
   color: var(--primary-color) !important;
   padding: 25px 12px;
   margin: 0 3px;
@@ -1115,8 +1115,9 @@ background-image: url(../img/texture.png);
 .team-medi-box h6 {
   text-align: center;
   position: relative;
-  font-weight: 400;
-  color: #063579;
+  font-weight: bold;
+  /* color: #063579; */
+  color: rgb(245, 56, 56);
   margin-bottom: 20px;
   font-size: 12px;
   margin-top: 15px;
@@ -1686,7 +1687,8 @@ text-transform: capitalize;
 }
 #about-us .modal-body p span {
   color: rgb(77, 80, 154);
-  font-weight: 500;
+  font-weight: bold;
+  font-size: 18px;
 }
 #aboutUs_modal{
     max-width: 800px !important;

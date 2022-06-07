@@ -68,7 +68,7 @@ export default function HomePage() {
                                         <div className="container">
                                             <div className="header-content">
                                                 <div className="head">
-                                                    <h2>VIDEO CONSULTATION <br />WITH CITY DOCTORS IN <br /> YOUR OWN VILLAGE</h2>
+                                                    <h2>GET VIDEO CONSULTATION <br />WITH CITY DOCTORS IN <br /> YOUR OWN VILLAGE</h2>
                                                     <ul>
                                                         <li>Visit the nearest kendra - Save money and time</li>
                                                         <li>Consult with the best specialists</li>
@@ -85,11 +85,11 @@ export default function HomePage() {
                                         <div className="container">
                                             <div className="header-content">
                                                 <div className="head">
-                                                    <h2>Doctor</h2>
+                                                    <h2>Are you a Doctor?</h2>
                                                     <p>Join Medyseva today to become part of the fast-evolving<br /> medical landscape of India!</p>
                                                     <ul>
                                                         <li>Consult in your free time as per your convenience</li>
-                                                        <li>Maximize your earningss</li>
+                                                        <li>Maximize your earnings</li>
                                                         <li>Change the lives of rural Indians</li>
                                                     </ul>
                                                 </div>
@@ -103,10 +103,10 @@ export default function HomePage() {
                                         <div className="container">
                                             <div className="header-content">
                                                 <div className="head">
-                                                    <h2>Village Enterpreneur</h2>
+                                                    <h2>Are you a Village Entrepreneur?</h2>
                                                     <p>Are you an entrepreneur in rural India? Join Medyseva today<br /> to add a new source of income!</p>
                                                     <ul>
-                                                        <li>Launch a Medyseva Kendrawith minimal investment</li>
+                                                        <li>Launch a Medyseva Kendra with minimal investment</li>
                                                         <li>Maximize your earnings</li>
                                                         <li>Help your fellow villagers to improve their health</li>
                                                     </ul>
@@ -121,8 +121,10 @@ export default function HomePage() {
                                         <div className="container">
                                             <div className="header-content">
                                                 <div className="head">
-                                                    <h2>NDHM/ ABHA</h2>
-                                                    <p>Medyseva is supporting National Digital Health Mission</p>
+                                                    <h2>We are supporting National<br/> Digital Health Mission</h2>
+                                                    {/* <p> We are supporting National Digital Health Mission</p> */}
+                                                    <p>Medyseva will soon be a part of ABHA, a Government initiative for creating <br/>India’s Digital Health Ecosystem
+</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -235,7 +237,8 @@ export default function HomePage() {
                                                             <img src="assets/img/ser/one.jpg" className="card-img-top" alt="..." />
                                                             <div className="card-body">
                                                                 <h4>Consultation</h4>
-                                                                <p className="card-text">The primary service provided by Medyseva is online/ teleconsultation. Our goal is to make the best doctors and specialists available to everyone, irrespective of their location</p>
+                                                                <p className="card-text">India’s best doctors across various specialties provide video consultation at affordable prices on the Medyseva platform. 
+</p>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -248,7 +251,8 @@ export default function HomePage() {
                                                             <img src="assets/img/ser/two.jpg" className="card-img-top" alt="..." />
                                                             <div className="card-body">
                                                                 <h4>Pathology</h4>
-                                                                <p className="card-text">We have collaborated with the labs nearest to our centers. The samples will be collected at our centers and they will be sent to the nearest lab for testing, after which the reports.</p>
+                                                                <p className="card-text">Samples are collected at our centers and tested at our local associated labs. The patient does not need to deliver samples or collect reports himself.
+</p>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -261,7 +265,7 @@ export default function HomePage() {
                                                             <img src="assets/img/ser/three.jpg" className="card-img-top" alt="..." />
                                                             <div className="card-body">
                                                                 <h4>Radiology</h4>
-                                                                <p className="card-text">Radiology Since our centers are in rural areas, good radiology services may not be available there. This is where we come in. We have collaborations with the best radiology centers in the nearest cities. The patient will be guided.</p>
+                                                                <p className="card-text">We have collaborations with the best radiology centers in the nearest cities. The patient is guided throughout the entire process.</p>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -274,7 +278,8 @@ export default function HomePage() {
                                                             <img src="assets/img/ser/four.jpg" className="card-img-top" alt="..." />
                                                             <div className="card-body">
                                                                 <h4>Hospitalization</h4>
-                                                                <p className="card-text">If a patient needs to be hospitalized, we will refer them to the nearest hospitals with which we have tie-ups. Medyseva will help the patient in transportation facilities and also through the formalities and processes.</p>
+                                                                <p className="card-text">For a patient who needs to be hospitalized, Medyseva assists the patient in transportation facilities to the nearest associated hospital and through the formalities and processes of the admission.
+</p>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -287,7 +292,22 @@ export default function HomePage() {
                                                             <img src="assets/img/image_2022_05_12T13_39_41_049Z.png" className="card-img-top" alt="..." />
                                                             <div className="card-body">
                                                                 <h4>Ambulance</h4>
-                                                                <p className="card-text">We provide ambulance service for patients who need to go to our associated or any other hospital. </p>
+                                                                <p className="card-text">We provide ambulance service for patients who need to go to our associated or any other hospital. 
+</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div className="slide">
+                                                <div className="h-100">
+                                                    <div className="service-card">
+                                                        <div className="card">
+                                                            <img src="assets/img/ser/three.jpg" className="card-img-top" alt="..." />
+                                                            <div className="card-body">
+                                                                <h4>Home Care Service </h4>
+                                                                <p className="card-text">For patients who are advised bedrest or who need to stay at home for their long recovery process, we provide trained nurses and other care- takers.
+</p>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -420,8 +440,8 @@ export default function HomePage() {
                                 <div className="col-md-4 col-sm-6 col-12">
                                     <div className="team-medi-box">
                                         <img className="doc-img" src="assets/img/team1.png" />
-                                        <h3>Vishesh</h3>
-                                        <h6>Founder/CEO</h6>
+                                        <h3>DR.ViSHESH KASLIWAL</h3>
+                                        <h6 style={{color:"",fontWeight:"bold"}}>FOUNDER/CEO</h6>
                                         <div className="other-info-box">
                                             <p>MBBS, MBA, DEM</p>
                                             <p>10+ years experience in healthcare</p>
@@ -435,7 +455,7 @@ export default function HomePage() {
                                 <div className="col-md-4 col-sm-6 col-12">
                                     <div className="team-medi-box">
                                         <img className="doc-img" src="assets/img/team2.png" />
-                                        <h3>Rachita</h3>
+                                        <h3>RACHITA KASLIWAL</h3>
                                         <h6>Co-Founder/Marketing</h6>
                                         <div className="other-info-box">
                                             <p>B.COM(H), MBA</p>
@@ -760,15 +780,17 @@ export default function HomePage() {
                             </div>
                             <div className="modal-body">
                                 <div className="content-des">
-                                    <p><span>Medyseva</span> is a healthcare startup focusing on Telemedicine in Rural India. It seeks to become the ultimate healthcare partner of all citizens such that they can get access to high quality healthcare services with ease and at affordable prices. It bridges the gap between the urban doctors and rural patients through Medyseva Kendras having state-of-the-art technology, which cover the entire spectrum of services that are needed to keep one healthy - from having virtual consultations to getting surgeries, from booking diagnostic tests to digitizing medical records.</p>
+                                    {/* <p><span>Medyseva</span> is a healthcare startup focusing on Telemedicine in Rural India. It seeks to become the ultimate healthcare partner of all citizens such that they can get access to high quality healthcare services with ease and at affordable prices. It bridges the gap between the urban doctors and rural patients through Medyseva Kendras having state-of-the-art technology, which cover the entire spectrum of services that are needed to keep one healthy - from having virtual consultations to getting surgeries, from booking diagnostic tests to digitizing medical records.</p> */}
 
                                     <p>Citizens in rural India face many challenges when it comes to medical treatment. They have to either spend a lot of money and time going to nearby cities for treatment or fall back on local doctors who may be unqualified/ underqualified. They might not be comfortable with mobile apps. Medyseva helps them to overcome these problems.</p>
 
                                     <p>Like many startup stories, our journey too began during the Covid pandemic. We realized that our friends and relatives in rural areas did not have access to good doctors and were unaware of or uncomfortable with mobile apps. That is when Medyseva was born, providing video consultation through our phygital centers – an ideal mix of online and offline. In July 2021, we launched two Medyseva Kendras in Madhya Pradesh and since then have been expanding our reach across Central India.</p>
 
-                                    <p><span>Mission: </span>To ensure that every rural citizen of India has access to high quality doctors and medical services at their convenience and at affordable prices.</p>
+                                    <p style={{fontWeight:"bold"}}><span>Mission: </span>To ensure that every rural citizen of India has access to high quality doctors and medical services at their convenience and at affordable prices.</p>
 
-                                    <p><span>Vision:</span> To be the nearest, affordable and the most reliable healthcare destination for the rural citizens of India.</p>
+                                    <p style={{fontWeight:"bold"}}><span>Vision:</span> To be the nearest, affordable and the most reliable healthcare destination for the rural citizens of India.</p>
+
+                                    
                                 </div>
                             </div>
                         </div>
