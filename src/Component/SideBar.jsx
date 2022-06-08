@@ -2,7 +2,7 @@ import React from 'react'
 
 
 function SideBar() {
-    
+  
 
     return (
         <>
@@ -22,7 +22,7 @@ function SideBar() {
                         <div className="navs">
                             <ul>
                                 <li>
-                                    <a href>About Us</a>
+                                    <a href="#about">About Us</a>
                                     {/* <div className="sub-menu">
                                         <ul>
                                             <li>
@@ -64,8 +64,13 @@ function SideBar() {
                                 </li> */}
                             </ul>
                         </div>
-                        <div className="request-btn">
-                            <button type="button" className="btn-1">Login</button>
+                        {/* <div className="request-btn">
+                            <button type="button"  href="https://clinic.medyseva.com/login" target={"_blank"} className="btn-1">Login</button>
+                        </div> */}
+                         <div className="btns-box">
+                            <div className="request-btn">
+                                <a   href="https://clinic.medyseva.com/login" target={"_blank"} className="btn-1">Login</a>
+                            </div>
                         </div>
                     </div>
                 </div>

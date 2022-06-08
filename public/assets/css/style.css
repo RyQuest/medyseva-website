@@ -877,7 +877,7 @@ background-image: url(../img/texture.png);
   color: #fff;
   line-height: 22px;
   min-height: 115px;
-  text-align: justify;
+  /* text-align: justify; */
 }
 
 #services .services-slider .owl-carousel .owl-nav {
@@ -1161,7 +1161,7 @@ background-image: url(../img/texture.png);
   font-size: 14px;
   line-height: 20px;
   min-height: 80px;
-  text-align: justify;
+  /* text-align: justify; */
 }
 
 .specialist-medi-sec {
@@ -1449,12 +1449,19 @@ background-image: url(../img/texture.png);
   top: 110%;
 }
 #testi .testi-slider .owl-carousel .owl-nav .owl-prev {
-  background-color: #418ddc;
+  /* background-color: #418ddc; */
+  background-color: #72a9db;
   padding: 6px 20px !important;
 }
 #testi .testi-slider .owl-carousel .owl-nav .owl-next {
   background-color: #72a9db;
   padding: 6px 20px !important;
+}
+#testi .testi-slider .owl-carousel .owl-nav .owl-prev:hover{
+  background-color: #418ddc;
+}
+#testi .testi-slider .owl-carousel .owl-nav .owl-next:hover{
+  background-color: #418ddc;
 }
 #testi .testi-slider .owl-carousel .owl-nav i {
   color: #fff;

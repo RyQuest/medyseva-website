@@ -254,7 +254,7 @@ export default function HomePage() {
                                                 <div className="h-100">
                                                     <div className="service-card">
                                                         <div className="card">
-                                                            <img src="assets/img/ser/one.jpg" className="card-img-top" alt="..." />
+                                                            <img src="assets/img/consattation.png" className="card-img-top" alt="..." />
                                                             <div className="card-body">
                                                                 <h4>Consultation</h4>
                                                                 <p className="card-text">India’s best doctors across various specialties provide video consultation at affordable prices on the Medyseva platform.
@@ -295,7 +295,7 @@ export default function HomePage() {
                                                 <div className="h-100">
                                                     <div className="service-card">
                                                         <div className="card">
-                                                            <img src="assets/img/ser/four.jpg" className="card-img-top" alt="..." />
+                                                            <img src="assets/img/hospitalzation.png" className="card-img-top" alt="..." />
                                                             <div className="card-body">
                                                                 <h4>Hospitalization</h4>
                                                                 <p className="card-text">For a patient who needs to be hospitalized, Medyseva assists the patient in transportation facilities to the nearest associated hospital and through the formalities and processes of the admission.

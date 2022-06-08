@@ -21,16 +21,16 @@ function Footer() {
                                       <a href="#services">Services</a>
                                   </li>
                                   <li>
-                                      <a href>Testimonials</a>
+                                      <a href="#testi">Testimonials</a>
                                   </li>
                                   <li>
                                       <a href>Blogs</a>
                                   </li>
-                                  <li>
+                                  {/* <li>
                                       <a href="#services">Join Us</a>
-                                  </li>
+                                  </li> */}
                                   <li>
-                                      <a href>Contact US</a>
+                                      <a href="#contact-info">Contact US</a>
                                   </li>
                               </ul>
                           </div>
@@ -63,6 +63,7 @@ function Footer() {
                                   <li>
                                       <a href="https://www.instagram.com/medy.seva/?utm_medium=copy_link" target="_blank"><i className="fab fa-instagram" /></a>
                                   </li>
+
                               </ul>
                           </div>
                       </div>
