@@ -10,6 +10,26 @@ import { axios } from '../../http';
 
 
 export default function HomePage() {
+    const startone =()=>{
+        const start1 =  document.getElementById("vid1")
+        const start2 =  document.getElementById("vid2")
+        const start3 =  document.getElementById("vid3")
+        const start4 =  document.getElementById("vid4")
+        start1.controls = true
+        start2.controls = true
+        start3.controls = true
+        start4.controls = true
+    }
+    const  closevideo = ()=>{
+        const new11 = document.getElementById("vid1")
+        const new12 = document.getElementById("vid2")
+        const new13 = document.getElementById("vid3")
+        const new14 = document.getElementById("vid4")
+        new11.pause()
+        new12.pause()
+        new13.pause()
+        new14.pause()
+    }
 
     const [joinTab, setJoinTab] = useState(1);
 
@@ -440,7 +460,7 @@ export default function HomePage() {
                                 <div className="col-md-4 col-sm-6 col-12">
                                     <div className="team-medi-box">
                                         <img className="doc-img" src="assets/img/team1.png" />
-                                        <h3>DR.ViSHESH KASLIWAL</h3>
+                                        <h3>DR.VISHESH KASLIWAL</h3>
                                         <h6 style={{ color: "", fontWeight: "bold" }}>FOUNDER/CEO</h6>
                                         <div className="other-info-box">
                                             <p>MBBS, MBA, DEM</p>
@@ -663,30 +683,39 @@ export default function HomePage() {
                                         <div className="owl-carousel">
                                             <div className="slide">
                                                 <div className="h-100">
-                                                    <div className="video-contain">
-                                                        <video width={320} height={240} controls src="assets/img/video/test1.mp4">
+                                                    <div className="video-contain" data-bs-toggle="modal" data-bs-target="#video11" onClick={()=>{
+                                                        startone()
+                                                    }}>
+                                                        <video style={{background:"black"}} width={320} height={240}  src="assets/img/video/test1.mp4">
                                                         </video></div>
                                                 </div>
                                             </div>
                                             <div className="slide">
                                                 <div className="h-100">
-                                                    <div className="video-contain">
-                                                        <video width={320} height={240} controls src="assets/img/video/test2.mp4">
+                                                    <div className="video-contain" data-bs-toggle="modal" data-bs-target="#video12" onClick={()=>{
+                                                        startone()
+                                                    }} >
+                                                        <video style={{background:"black"}} width={320} height={240}  src="assets/img/video/test2.mp4">
                                                         </video></div>
                                                 </div>
                                             </div>
                                             <div className="slide">
                                                 <div className="h-100">
-                                                    <div className="video-contain">
-                                                        <video width={320} height={240} controls src="assets/img/video/test3.mp4">
+                                                    <div className="video-contain" data-bs-toggle="modal" data-bs-target="#video13" onClick={()=>{
+                                                        startone()
+                                                    }}>
+                                                        <video style={{background:"black"}} width={320} height={240} src="assets/img/video/test3.mp4">
                                                         </video></div>
                                                 </div>
                                             </div>
                                             <div className="slide">
                                                 <div className="h-100">
-                                                    <div className="video-contain">
-                                                        <video width={320} height={240} controls src="assets/img/video/test4.mp4">
-                                                        </video></div>
+                                                    <div className="video-contain" data-bs-toggle="modal" data-bs-target="#video14" onClick={()=>{
+                                                        startone()
+                                                    }}>
+                                                        <video style={{background:"black"}} width={320} height={240}  src="assets/img/video/test4.mp4">
+                                                        </video>
+                                                        </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -774,6 +803,76 @@ export default function HomePage() {
                       <a style="text-decoration: none;" href="https://www.practo.com/consult" target="_blank"><h4 class="mb-0"> https://www.practo.com/consult</h4></a>
                       <a style="text-decoration: none;" href="https://www.practo.com/providers/clinics/profile" target="_blank"><h4 class="mb-5"> https://www.practo.com/providers/clinics/profile</h4></a> */}
 
+                </div>
+                {/* video one model box */}
+                <div className="modal fade" id="video11" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div className="modal-dialog modal-dialog-centered" id='aboutUs_modal'>
+                        <div className="modal-content">
+                            <div className="modal-header">
+                                <button type="button" onClick={()=>{
+                                    closevideo()
+                                }} className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div className="modal-body">
+                                <div className="content-des modlevid">
+                                <video width={400} height={350} id="vid1" src="assets/img/video/test1.mp4">
+                                                        </video>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {/* video two model box */}
+                <div className="modal fade" id="video12" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div className="modal-dialog modal-dialog-centered" id='aboutUs_modal'>
+                        <div className="modal-content">
+                            <div className="modal-header">
+                                <button type="button" onClick={()=>{
+                                    closevideo()
+                                }} className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div className="modal-body">
+                                <div className="content-des modlevid">
+                                <video width={400} height={350} id="vid2"  src="assets/img/video/test2.mp4"> </video>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {/* video three model box */}
+                <div className="modal fade" id="video13" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div className="modal-dialog modal-dialog-centered" id='aboutUs_modal'>
+                        <div className="modal-content">
+                            <div className="modal-header">
+                                <button type="button" onClick={()=>{
+                                    closevideo()
+                                }} className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div className="modal-body">
+                                <div className="content-des modlevid">
+                                <video width={400} height={350} id="vid3" src="assets/img/video/test3.mp4"></video>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                 {/* video four model box */}
+                 <div className="modal fade" id="video14" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div className="modal-dialog modal-dialog-centered" id='aboutUs_modal'>
+                        <div className="modal-content">
+                            <div className="modal-header">
+                                <button type="button" onClick={()=>{
+                                    closevideo()
+                                }} className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div className="modal-body">
+                                <div className="content-des modlevid">
+                                <video width={400} height={350} id="vid4" src="assets/img/video/test4.mp4"> </video>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
 

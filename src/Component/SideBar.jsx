@@ -23,7 +23,7 @@ function SideBar() {
                             <ul>
                                 <li>
                                     <a href>About Us</a>
-                                    <div className="sub-menu">
+                                    {/* <div className="sub-menu">
                                         <ul>
                                             <li>
                                                 <a href>one</a>
@@ -32,27 +32,36 @@ function SideBar() {
                                                 <a href>two</a>
                                             </li>
                                         </ul>
-                                    </div>
+                                    </div> */}
                                 </li>
                                 <li>
-                                    <a href>Services</a>
+                                    <a>Services</a>
                                     <div className="sub-menu">
                                         <ul>
                                             <li>
-                                                <a href>one</a>
+                                                <a href="#services">Consultation</a>
                                             </li>
                                             <li>
-                                                <a href>two</a>
+                                                <a href="#services ">Pathology</a>
+                                            </li>
+                                            <li>
+                                                <a href=" #services">Radiology</a>
+                                            </li>
+                                            <li>
+                                                <a href=" #services">Hospitalization</a>
+                                            </li>
+                                            <li>
+                                                <a href=" #services">Ambulance</a>
                                             </li>
                                         </ul>
                                     </div>
                                 </li>
-                                <li>
+                                {/* <li>
                                     <a href>Join Us</a>
                                 </li>
                                 <li>
                                     <a href>Blogs</a>
-                                </li>
+                                </li> */}
                             </ul>
                         </div>
                         <div className="request-btn">
