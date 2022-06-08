@@ -806,8 +806,8 @@ export default function HomePage() {
                 </div>
                 {/* video one model box */}
                 <div className="modal fade" id="video11" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div className="modal-dialog modal-dialog-centered" id='aboutUs_modal'>
-                        <div className="modal-content">
+                    <div className="modal-dialog modal-dialog-centered" style={{justifyContent:"center"}} id='aboutUs_modal'>
+                        <div className="modal-content widthmodle">
                             <div className="modal-header">
                                 <button type="button" onClick={()=>{
                                     closevideo()
@@ -824,8 +824,8 @@ export default function HomePage() {
                 </div>
                 {/* video two model box */}
                 <div className="modal fade" id="video12" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div className="modal-dialog modal-dialog-centered" id='aboutUs_modal'>
-                        <div className="modal-content">
+                    <div className="modal-dialog modal-dialog-centered" style={{justifyContent:"center"}} id='aboutUs_modal'>
+                        <div className="modal-content widthmodle">
                             <div className="modal-header">
                                 <button type="button" onClick={()=>{
                                     closevideo()
@@ -841,8 +841,8 @@ export default function HomePage() {
                 </div>
                 {/* video three model box */}
                 <div className="modal fade" id="video13" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div className="modal-dialog modal-dialog-centered" id='aboutUs_modal'>
-                        <div className="modal-content">
+                    <div className="modal-dialog modal-dialog-centered" style={{justifyContent:"center"}} id='aboutUs_modal'>
+                        <div className="modal-content widthmodle">
                             <div className="modal-header">
                                 <button type="button" onClick={()=>{
                                     closevideo()
@@ -859,8 +859,8 @@ export default function HomePage() {
 
                  {/* video four model box */}
                  <div className="modal fade" id="video14" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div className="modal-dialog modal-dialog-centered" id='aboutUs_modal'>
-                        <div className="modal-content">
+                    <div className="modal-dialog modal-dialog-centered" style={{justifyContent:"center"}} id='aboutUs_modal'>
+                        <div className="modal-content widthmodle">
                             <div className="modal-header">
                                 <button type="button" onClick={()=>{
                                     closevideo()
@@ -895,10 +895,24 @@ export default function HomePage() {
 
                                     <p ><span>Vision:</span> To be the nearest, affordable and the most reliable healthcare destination for the rural citizens of India.</p>
                                     <p ><span>Awards received: </span><br/>
-                                        ⦁	Global Hackathon conducted by MERI College, Delhi<br/>
+                                    <ul>
+                                        <li>
+                                        Global Hackathon conducted by MERI College, Delhi 
+                                        </li>
+                                        <li>
+                                        Global Entrepreneur summit 2022 conducted by Jai Hind College, Mumbai. 
+                                        </li>
+                                        <li>
+                                        Heart Pitch competition conducted by TiE MP 
+                                        </li>
+                                        <li>
+                                        Hubli TiECON Business Pitch Competition 
+                                        </li>
+                                    </ul>
+                                        {/* ⦁	Global Hackathon conducted by MERI College, Delhi<br/>
                                         ⦁	Global Entrepreneur summit 2022 conducted by Jai Hind College, Mumbai.<br/>
                                         ⦁	Heart Pitch competition conducted by TiE MP<br/>
-                                        ⦁	Hubli TiECON Business Pitch Competition<br/>
+                                        ⦁	Hubli TiECON Business Pitch Competition<br/> */}
                                     </p>
 
                                 </div>

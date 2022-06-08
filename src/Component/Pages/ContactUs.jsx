@@ -148,13 +148,13 @@ function ContactUs() {
                                 <div className="social-links">
                                     <ul>
                                         <li>
-                                            <a href target="_blank"><i className="fab fa-facebook-f" /></a>
+                                            <a href="https://www.facebook.com/Medyseva/" target="_blank"><i className="fab fa-facebook-f" /></a>
                                         </li>
                                         <li>
-                                            <a href target="_blank"><i className="fab fa-twitter" /></a>
+                                            <a href="https://mobile.twitter.com/medyseva" target="_blank"><i className="fab fa-twitter" /></a>
                                         </li>
                                         <li>
-                                            <a href target="_blank"><i className="fab fa-instagram" /></a>
+                                            <a href="https://www.instagram.com/medy.seva/?utm_medium=copy_link" target="_blank"><i className="fab fa-instagram" /></a>
                                         </li>
                                         <li>
                                             <a href target="_blank"><i className="fab fa-whatsapp" /></a>

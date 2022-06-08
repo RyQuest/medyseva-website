@@ -877,7 +877,7 @@ background-image: url(../img/texture.png);
   color: #fff;
   line-height: 22px;
   min-height: 115px;
-  /* text-align: justify; */
+  text-align: left;
 }
 
 #services .services-slider .owl-carousel .owl-nav {
@@ -1720,7 +1720,7 @@ text-transform: capitalize;
   list-style: none;
   font-size: 15px;
   font-family: var(--Montserrat);
-  font-weight: 300;
+  font-weight: bold;
   line-height: 40px;
   border-bottom: 1px solid #ddd;
 }
@@ -1834,4 +1834,8 @@ text-transform: capitalize;
 .modlevid{
   display: flex;
   justify-content: center;
+}
+
+.widthmodle{
+  width: 400px;
 }

@@ -49,17 +49,17 @@ function toggleNav($) {
     $(sideMenu_subMenu).prev('a').addClass('down-arrow');
 
     $('.side-menu .navs > ul > li > a').click(function () {
-        $('.side-menu .navs > ul > li > a ~ .sub-menu').slideUp();
-        $('.side-menu .navs > ul > li > a').removeClass('active');
+        // $('.side-menu .navs > ul > li > a ~ .sub-menu').slideUp();
+        // $('.side-menu .navs > ul > li > a').removeClass('active');
 
-        if ($(this).next('.sub-menu').is(':visible')) {
-            $('.side-menu .navs > ul > li > a').removeClass('active');
-            $(this).next('.sub-menu').slideUp();
-        }
-        else {
+        // if ($(this).next('.sub-menu').is(':visible')) {
+        //     $('.side-menu .navs > ul > li > a').removeClass('active');
+        //     $(this).next('.sub-menu').slideUp();
+        // }
+        // else {
             $(this).next('.sub-menu').slideDown();
             $(this).addClass('active');
-        }
+        // }
     });
 
 

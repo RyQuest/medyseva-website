@@ -3,7 +3,6 @@ import React from 'react'
 
 function SideBar() {
   
-
     return (
         <>
             <div className="side-menu-area">
@@ -22,7 +21,7 @@ function SideBar() {
                         <div className="navs">
                             <ul>
                                 <li>
-                                    <a href="#about">About Us</a>
+                                    <a href="#about" >About Us</a>
                                     {/* <div className="sub-menu">
                                         <ul>
                                             <li>
