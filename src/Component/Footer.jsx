@@ -21,17 +21,14 @@ function Footer() {
                                       <a href="#services">Services</a>
                                   </li>
                                   <li>
-                                      <a href="#testi">Testimonials</a>
-                                  </li>
-                                  <li>
-                                      <a href>Blogs</a>
-                                  </li>
-                                  {/* <li>
-                                      <a href="#services">Join Us</a>
-                                  </li> */}
-                                  <li>
-                                      <a href="#contact-info">Contact US</a>
-                                  </li>
+                                    <a href="#team">Team</a>
+                                </li>
+                                <li>
+                                    <a href="#gallery">Gallery</a>
+                                </li>
+                                <li>
+                                    <a href="#contact-info">Contact Us</a>
+                                </li>
                               </ul>
                           </div>
                       </div>

@@ -55,6 +55,15 @@ function SideBar() {
                                         </ul>
                                     </div>
                                 </li>
+                                <li>
+                                    <a href="#team">Team</a>
+                                </li>
+                                <li>
+                                    <a href="#gallery">Gallery</a>
+                                </li>
+                                <li>
+                                    <a href="#contact-info">Contact Us</a>
+                                </li>
                                 {/* <li>
                                     <a href>Join Us</a>
                                 </li>

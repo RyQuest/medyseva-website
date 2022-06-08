@@ -418,9 +418,9 @@ export default function HomePage() {
                         <div className="container">
                             <div className="row">
                                 <div className="col-md-12">
-                                    <div className="head">
+                                    {/* <div className="head">
                                         <h2>Counters</h2>
-                                    </div>
+                                    </div> */}
                                 </div>
                                 <div className="col-lg-3 stats col-6">
                                     <img src="assets/img/counter/one.png" />
@@ -446,7 +446,7 @@ export default function HomePage() {
                         </div>
                     </section>
 
-                    <section className="team-medi-sec">
+                    <section id='team' className="team-medi-sec">
                         <div className="container">
                             <div className="row">
                                 <div className="col-sm-12">
@@ -491,7 +491,7 @@ export default function HomePage() {
                                     <div className="team-medi-box">
                                         <img className="doc-img" src="assets/img/team3.png" />
                                         <h3>DR.RASHMI PATIDAR</h3>
-                                        <h6>CHIFE MEDICAL OFFICER</h6>
+                                        <h6>CHIEF MEDICAL OFFICER</h6>
                                         <div className="other-info-box">
                                             <p>MBBS, MD(Pathology)</p>
                                             <p>10+ years experience in healthcare</p>
@@ -948,6 +948,8 @@ export default function HomePage() {
                                         <li>Urology</li>
                                         <li>Nephrology</li>
                                         <li>Dentistry</li>
+                                        <li>Gynaecology</li>
+                                        <li>MD Medicine</li>
                                     </ul>
                                 </div>
                             </div>

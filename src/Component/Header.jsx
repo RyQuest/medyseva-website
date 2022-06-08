@@ -57,8 +57,8 @@ function toggleNav($) {
         //     $(this).next('.sub-menu').slideUp();
         // }
         // else {
-            $(this).next('.sub-menu').slideDown();
-            $(this).addClass('active');
+        $(this).next('.sub-menu').slideDown();
+        $(this).addClass('active');
         // }
     });
 
@@ -134,20 +134,30 @@ function Header() {
                                             <li>
                                                 <a href=" #services">Ambulance</a>
                                             </li>
+
                                         </ul>
                                     </div>
+                                </li>
+                                <li>
+                                    <a href="#team">Team</a>
+                                </li>
+                                <li>
+                                    <a href="#gallery">Gallery</a>
+                                </li>
+                                <li>
+                                    <a href="#contact-info">Contact Us</a>
                                 </li>
                                 {/* <li>
                                     <a href="#join-us">Join Us</a>
                                 </li> */}
-                               {/* <li>
+                                {/* <li>
                                     <a href=" ">Blogs</a>
                                 </li> */}
                             </ul>
                         </div>
                         <div className="btns-box">
                             <div className="request-btn">
-                                <a   href="https://clinic.medyseva.com/login" target={"_blank"} className="btn-1">Login</a>
+                                <a href="https://clinic.medyseva.com/login" target={"_blank"} className="btn-1">Login</a>
                             </div>
                         </div>
                         <div className="menu-btn-box d-xl-none">
