@@ -850,7 +850,7 @@ export default function HomePage() {
                             </div>
                             <div className="modal-body">
                                 <div className="content-des modlevid">
-                                <video width={400} height={350} id="vid3" src="assets/img/video/test3.mp4"></video>
+                                <video width={300} height={250} id="vid3" src="assets/img/video/test3.mp4"></video>
                                 </div>
                             </div>
                         </div>
@@ -868,7 +868,7 @@ export default function HomePage() {
                             </div>
                             <div className="modal-body">
                                 <div className="content-des modlevid">
-                                <video width={400} height={350} id="vid4" src="assets/img/video/test4.mp4"> </video>
+                                <video width={300} height={250} id="vid4" src="assets/img/video/test4.mp4"> </video>
                                 </div>
                             </div>
                         </div>

@@ -47,20 +47,34 @@ function toggleNav($) {
 
     var sideMenu_subMenu = $('.side-menu .navs > ul > li > .sub-menu');
     $(sideMenu_subMenu).prev('a').addClass('down-arrow');
-
+// if( $(this).next('.sub-menu').slideUp()){
     $('.side-menu .navs > ul > li > a').click(function () {
         // $('.side-menu .navs > ul > li > a ~ .sub-menu').slideUp();
         // $('.side-menu .navs > ul > li > a').removeClass('active');
-
+        var newone = false
         // if ($(this).next('.sub-menu').is(':visible')) {
-        //     $('.side-menu .navs > ul > li > a').removeClass('active');
-        //     $(this).next('.sub-menu').slideUp();
-        // }
-        // else {
-        $(this).next('.sub-menu').slideDown();
-        $(this).addClass('active');
-        // }
-    });
+            //     $('.side-menu .navs > ul > li > a').removeClass('active');
+            //     $(this).next('.sub-menu').slideUp();
+            // }
+            // else {
+                // if(newone == true){
+                     if(newone == false){
+                         $(this).next('.sub-menu').slideDown();
+                         $(this).addClass('active');
+                         newone = true
+                         console.log(newone);
+                        }
+                    if(newone == true){
+                        $('.side-menu .navs > ul > li > a').click (function () {
+                            $(this).next('.sub-menu').slideUp();
+                            $(this).removeClass('active');
+                        });
+                    }
+
+            });
+
+          
+
 
 
     // Request-Form Popup ==============================
