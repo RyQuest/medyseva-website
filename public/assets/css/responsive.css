@@ -6,9 +6,21 @@
     padding: 30px 0px;
 }
 
-#banner-slider .slide {
-    height: 100vh;
-    position: relative;
+#banner-slider .slide1 {
+    height: 400px;
+  background: url("../img/banner/MedySeva HeaderImages-04.jpg") no-repeat center center/cover;
+}
+#banner-slider .slide2 {
+    height: 400px;
+  background: url("../img/banner/MedySeva HeaderImages-01.jpg") no-repeat center center/cover;
+}
+#banner-slider .slide3 {
+    height: 400px;
+  background: url("../img/banner/MedySeva HeaderImages-02.jpg") no-repeat center center/cover;
+}
+#banner-slider .slide4 {
+    height: 400px;
+  background: url("../img/banner/MedySeva HeaderImages-03.jpg") no-repeat center center/cover;
 }
 #about-us .head h2 {
     font-size: 32px;

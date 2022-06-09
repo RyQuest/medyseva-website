@@ -82,8 +82,8 @@ export default function HomePage() {
                     <section id="banner-slider">
                         <div className="top-banner-slider">
                             <div className="owl-carousel">
-                                <div className="slide">
-                                    <img src="assets/img/banner/banner1.jpg" alt="images not found" />
+                                <div className="slide slide1">
+                                    {/* <img src="assets/img/banner/banner1.jpg" alt="images not found" /> */}
                                     <div className="cover">
                                         <div className="container">
                                             <div className="header-content">
@@ -99,8 +99,8 @@ export default function HomePage() {
                                         </div>
                                     </div>
                                 </div>
-                                <div className="slide">
-                                    <img src="assets/img/banner/banner2.jpg" alt="images not found" />
+                                <div className="slide slide2">
+                                    {/* <img src="assets/img/banner/banner2.jpg" alt="images not found" /> */}
                                     <div className="cover">
                                         <div className="container">
                                             <div className="header-content">
@@ -117,8 +117,8 @@ export default function HomePage() {
                                         </div>
                                     </div>
                                 </div>
-                                <div className="slide">
-                                    <img src="assets/img/banner/banner3.jpg" alt="images not found" />
+                                <div className="slide slide3">
+                                    {/* <img src="assets/img/banner/banner3.jpg" alt="images not found" /> */}
                                     <div className="cover">
                                         <div className="container">
                                             <div className="header-content">
@@ -135,8 +135,8 @@ export default function HomePage() {
                                         </div>
                                     </div>
                                 </div>
-                                <div className="slide">
-                                    <img src="assets/img/banner/banner4.jpg" alt="images not found" />
+                                <div className="slide slide4">
+                                    {/* <img src="assets/img/banner/banner4.jpg" alt="images not found" /> */}
                                     <div className="cover">
                                         <div className="container">
                                             <div className="header-content">

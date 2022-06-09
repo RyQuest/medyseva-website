@@ -512,9 +512,29 @@ header .header .btns-box .contact-btn .contact-info .info a:hover {
   width: 100%;
 }
 
-#banner-slider .slide {
-  height: 100%;
-  position: relative;
+#banner-slider .slide1 {
+  /* height: 100%; */
+  /* position: relative; */
+  height: 600px;
+  background: url("../img/banner/banner1.jpg") no-repeat center top/cover;
+}
+#banner-slider .slide2 {
+  /* height: 100%; */
+  /* position: relative; */
+  height: 600px;
+  background: url("../img/banner/banner2.jpg") no-repeat center top/cover;
+}
+#banner-slider .slide3 {
+  /* height: 100%; */
+  /* position: relative; */
+  height: 600px;
+  background: url("../img/banner/banner3.jpg") no-repeat center top/cover;
+}
+#banner-slider .slide4 {
+  /* height: 100%; */
+  /* position: relative; */
+  height: 600px;
+  background: url("../img/banner/banner4.jpg") no-repeat center top/cover;
 }
 #banner-slider .slide img {
   width: 100%;
