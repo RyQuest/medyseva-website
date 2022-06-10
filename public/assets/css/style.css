@@ -1678,7 +1678,7 @@ text-transform: capitalize;
 }
 #download-apps .points ul {
   margin: 0;
-  padding: 30px 5px;
+  padding: 50px 5px;
 }
 #download-apps .points ul li {
   font-family: var(--primary-color);

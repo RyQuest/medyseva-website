@@ -375,6 +375,24 @@ export default function HomePage() {
                                         <h3>Physiotherapy</h3>
                                     </div>
                                 </div>
+                                <div className="col-sm-3">
+                                    <div className="specialist-box">
+                                        <img className="doc-img" src="assets/img/png-transparent-cardiology-computer-icons-heart-cardiovascular-disease-heart-text-hand-heart-thumbnail.png" />
+                                        <h3>Cardiology</h3>
+                                    </div>
+                                </div>
+                                <div className="col-sm-3">
+                                    <div className="specialist-box">
+                                        <img className="doc-img" src="assets/img/pngtree-cartoon-hand-drawn-gynecology-explaining-plant-illustration-png-image_5512059.jpg" />
+                                        <h3>Gynaecology</h3>
+                                    </div>
+                                </div>
+                                <div className="col-sm-3">
+                                    <div className="specialist-box">
+                                        <img className="doc-img" src="assets/img/neuro.svg.med.png.crdownload" />
+                                        <h3>Neurology</h3>
+                                    </div>
+                                </div>
                                 <div className="col-md-12">
                                     <div className="btn1">
                                         <a className='text-white' data-bs-toggle="modal" data-bs-target="#Specialities">Know More</a>
@@ -754,9 +772,9 @@ export default function HomePage() {
                                         </ul>
                                     </div>
                                     <div className="store-icon">
-                                        <a target="_blank" href="https://www.practo.com/consult ">
+                                        <a target="" data-bs-toggle="modal" data-bs-target="#app1" href="">
                                         <img src="assets/img/gp.png" /></a>
-                                        <a target="_blank" href="https://www.practo.com/providers/clinics/profile">
+                                        <a target="" data-bs-toggle="modal" data-bs-target="#app2" href="">
                                         <img src="assets/img/ap.png" /></a>
                                     </div>
                                 </div>
@@ -804,6 +822,38 @@ export default function HomePage() {
                       <a style="text-decoration: none;" href="https://www.practo.com/providers/clinics/profile" target="_blank"><h4 class="mb-5"> https://www.practo.com/providers/clinics/profile</h4></a> */}
 
                 </div>
+                      {/* app model box for know  */}
+                      <div className="modal fade" id="app1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div className="modal-dialog modal-dialog-centered" style={{justifyContent:"center"}} id='aboutUs_modal'>
+                        <div className="modal-content widthmodle">
+                            {/* <div className="modal-header"> */}
+                                {/* <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> */}
+                            {/* </div> */}
+                            <div className="modal-body">
+                                <div className="content-des modlevid">
+                               <h2 style={{color:"#063579"}}>Coming Soon...</h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div className="modal fade" id="app2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div className="modal-dialog modal-dialog-centered" style={{justifyContent:"center"}} id='aboutUs_modal'>
+                        <div className="modal-content widthmodle">
+                            {/* <div className="modal-header"> */}
+                                {/* <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> */}
+                            {/* </div> */}
+                            <div className="modal-body">
+                                <div className="content-des modlevid">
+                               <h2 style={{color:"#063579"}}>Coming Soon...</h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {/* end of app model */}
+
+
                 {/* video one model box */}
                 <div className="modal fade" id="video11" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div className="modal-dialog modal-dialog-centered" style={{justifyContent:"center"}} id='aboutUs_modal'>

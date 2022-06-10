@@ -47,33 +47,34 @@ function toggleNav($) {
 
     var sideMenu_subMenu = $('.side-menu .navs > ul > li > .sub-menu');
     $(sideMenu_subMenu).prev('a').addClass('down-arrow');
-// if( $(this).next('.sub-menu').slideUp()){
+    // if( $(this).next('.sub-menu').slideUp()){
+        var newone = true
+        var newone1 = true
     $('.side-menu .navs > ul > li > a').click(function () {
         // $('.side-menu .navs > ul > li > a ~ .sub-menu').slideUp();
         // $('.side-menu .navs > ul > li > a').removeClass('active');
-        var newone = false
         // if ($(this).next('.sub-menu').is(':visible')) {
-            //     $('.side-menu .navs > ul > li > a').removeClass('active');
-            //     $(this).next('.sub-menu').slideUp();
-            // }
-            // else {
-                // if(newone == true){
-                     if(newone == false){
-                         $(this).next('.sub-menu').slideDown();
-                         $(this).addClass('active');
-                         newone = true
-                         console.log(newone);
-                        }
-                    if(newone == true){
-                        $('.side-menu .navs > ul > li > a').click (function () {
-                            $(this).next('.sub-menu').slideUp();
-                            $(this).removeClass('active');
-                        });
-                    }
+        //     $('.side-menu .navs > ul > li > a').removeClass('active');
+        //     $(this).next('.sub-menu').slideUp();
+        // }
+        // else {
+        // if(newone == true){
+        // $(this).next('.sub-menu').slideToggle();
+        switch (newone1) {
+            case (newone): $(this).next('.sub-menu').slideDown();
+                $(this).addClass('active');
+                newone = false
+                break;
+                case (newone == false): $(this).next('.sub-menu').slideUp();
+                $(this).removeClass('active');
+                newone = true
+                break;
+                default : console.log(newone);
 
-            });
+        }
+    });
 
-          
+
 
 
 
