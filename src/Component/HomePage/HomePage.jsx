@@ -351,7 +351,7 @@ export default function HomePage() {
                                 </div>
                             </div>
                             <div className="row">
-                                <div className="col-sm-3">
+                                {/* <div className="col-sm-3">
                                     <div className="specialist-box">
                                         <img className="doc-img" src="assets/img/specialist1.png" />
                                         <h3>Dermatology </h3>
@@ -368,6 +368,12 @@ export default function HomePage() {
                                         <img className="doc-img" src="assets/img/specialist3.png" />
                                         <h3>Pulmonology</h3>
                                     </div>
+                                </div> */}
+                                 <div className="col-sm-3">
+                                    <div className="specialist-box">
+                                        <img className="doc-img" src="assets/img/pngtree-cartoon-hand-drawn-gynecology-explaining-plant-illustration-png-image_5512059.jpg" />
+                                        <h3>Gynaecology</h3>
+                                    </div>
                                 </div>
                                 <div className="col-sm-3">
                                     <div className="specialist-box">
@@ -381,12 +387,7 @@ export default function HomePage() {
                                         <h3>Cardiology</h3>
                                     </div>
                                 </div>
-                                <div className="col-sm-3">
-                                    <div className="specialist-box">
-                                        <img className="doc-img" src="assets/img/pngtree-cartoon-hand-drawn-gynecology-explaining-plant-illustration-png-image_5512059.jpg" />
-                                        <h3>Gynaecology</h3>
-                                    </div>
-                                </div>
+                               
                                 <div className="col-sm-3">
                                     <div className="specialist-box">
                                         <img className="doc-img" src="assets/img/neuro.svg.med.png.crdownload" />
