@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Formik } from 'formik';
 import * as Yup from 'yup';
 import axios from 'axios';
@@ -10,23 +10,46 @@ function ContactUs() {
     const validationSchema = Yup.object({
         name: Yup.string().trim().required('Name is required'),
         email: Yup.string().email().typeError().required('E-mail id required'),
-        number: Yup.string()
+        mobile: Yup.string()
             .trim()
             .min(10)
             .max(10)
             .required("Phone number is required"),
-        message: Yup.string().required("Details is required")
+        type: Yup.string().required("Details is required")
     })
 
-    const submitting =async (values) => {
-        // console.log(values);
-        const res = await axios.post(`http://api.medyseva.com/api/contact_us?name=${values.name}&email=${values.email}&number=${values.number}&message=${values.message}`)
-            .then((res) => {
-            console.log(res);
-            toast(res.data.msg)
-        }).catch((err) => {
-            toast(err.message);
-        })
+    // const submitting =async (values) => {
+    //     // console.log(values);
+    //     const res = await axios.post(`http://api.medyseva.com/api/contact_us?name=${values.name}&email=${values.email}&number=${values.mobile}&message=${values.type}`)
+    //         .then((res) => {
+    //         console.log(res);
+    //         toast(res.data.msg)
+    //     }).catch((err) => {
+    //         toast(err.message);
+    //     })
+    // }
+    const [inputdata,setInputdata] = useState({
+        name:"",
+        email:"",
+        mobile:"",
+        type:""
+    })
+    const formdata = (event)=>{
+        const name = event.target.name
+        const value = event.target.value
+        setInputdata({...inputdata,[name]:value})
+    }
+    const myfunction = async () => {
+        // console.log(values)
+        // const payload = { ...values }
+        // console.log(payload);
+        const response = await axios.post('https://api.medyseva.com/api/contact_us', inputdata)
+            .then((response) => {
+                console.log(response);
+                toast(response.data.msg)
+            }).catch((err) => {
+                toast(err.message);
+            })
     }
 
     return (
@@ -36,18 +59,18 @@ function ContactUs() {
                     <div className="row">
 
                         <Formik
-                            enableReinitialize
-                            initialValues={{
-                                name: "",
-                                email: "",
-                                number: "",
-                                message: "",
-                            }}
+                            // enableReinitialize
+                            // initialValues={{
+                            //     name: "",
+                            //     email: "",
+                            //     mobile: "",
+                            //     type: "",
+                            // }}
                             validationSchema={validationSchema}
-                            onSubmit={(values) => {
-                                // console.log(values);
-                                submitting(values);
-                            }}
+                            // onSubmit={(values) => {
+                            //     // console.log(values);
+                            //     // submitting(values);
+                            // }}
                         >
                             {({
                                 values,
@@ -62,11 +85,11 @@ function ContactUs() {
                                         <div className="head">
                                             <h2>Contact Us</h2>
                                         </div>
-                                        <form onSubmit={handleSubmit}>
+                                        <div>
                                             <div className="row">
                                                 <div className="col-md-12">
                                                     <div className="input-field">
-                                                        <input type="text" name="name" value={values.name} placeholder="Name*" onChange={handleChange}
+                                                        <input type="text" name="name" value={inputdata.name} placeholder="Name*" onChange={formdata} 
                                                             onBlur={handleBlur} />
                                                     </div>
                                                     <div className="error-message1">
@@ -74,7 +97,7 @@ function ContactUs() {
                                                     </div>
                                                     <div className="col-md-12">
                                                         <div className="input-field">
-                                                            <input type="number" name="number" value={values.number} placeholder="Mobile" onChange={handleChange}
+                                                            <input type="number" name="mobile" value={inputdata.mobile} placeholder="Mobile" onChange={formdata} 
                                                                 onBlur={handleBlur} />
                                                         </div>
                                                         <div className="error-message1">
@@ -83,7 +106,7 @@ function ContactUs() {
                                                     </div>
                                                     <div className="col-md-12">
                                                         <div className="input-field">
-                                                            <input type="email" name="email" value={values.email} placeholder="Email*" onChange={handleChange}
+                                                            <input type="email" name="email" value={inputdata.email} placeholder="Email*" onChange={formdata} 
                                                                 onBlur={handleBlur} />
                                                         </div>
                                                         <div className="error-message1">
@@ -108,7 +131,8 @@ function ContactUs() {
                                                                     <li id='7' > Job Seeker</li>
                                                                 </ul>
                                                             </div> */}
-                                                            <input list="details" id="myBrowser" placeholder='I am a' name="message" onChange={handleChange}
+                                                            <input list="details" id="myBrowser" placeholder='I am a' name="type" onChange={formdata}
+                                                            value={inputdata.type} 
                                                                 onBlur={handleBlur} />
                                                             <datalist id="details">
                                                                 <option value="Patient" />
@@ -126,12 +150,14 @@ function ContactUs() {
                                                     </div>
                                                     <div className="col-md-12">
                                                         <div className="input-field d-flex justify-content-center">
-                                                            <input type="submit" value="submit" />
+                                                            <input onClick={()=>{
+                                                                myfunction()
+                                                            }} type="submit" value="submit" />
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                        </form>
+                                        </div>
                                     </div>
                                 </div>
                             )}
