@@ -40,6 +40,7 @@ function ContactUs() {
         setInputdata({...inputdata,[name]:value})
     }
     const myfunction = async () => {
+        console.log(inputdata);
         // console.log(values)
         // const payload = { ...values }
         // console.log(payload);
@@ -66,7 +67,7 @@ function ContactUs() {
                             //     mobile: "",
                             //     type: "",
                             // }}
-                            validationSchema={validationSchema}
+                            // validationSchema={validationSchema}
                             // onSubmit={(values) => {
                             //     // console.log(values);
                             //     // submitting(values);
@@ -131,10 +132,22 @@ function ContactUs() {
                                                                     <li id='7' > Job Seeker</li>
                                                                 </ul>
                                                             </div> */}
-                                                            <input list="details" id="myBrowser" placeholder='I am a' name="type" onChange={formdata}
+                                                            {/* <input list="details" id="myBrowser" placeholder='I am a' name="type" onChange={formdata}
                                                             value={inputdata.type} 
-                                                                onBlur={handleBlur} />
-                                                            <datalist id="details">
+                                                                onBlur={handleBlur} /> */}
+                                                                <select name="type" list="details" id="myBrowser" placeholder='I am a'  onChange={formdata}
+                                                            value={inputdata.type} 
+                                                                onBlur={handleBlur}>
+                                                                     <option disabled value="" style={{display:"none"}}>I am a</option>
+                                                                    <option value="Patient" >Patient</option>
+                                                                    <option value="Doctor">Doctor</option>
+                                                                    <option value="Business Owner">Business Owner</option>
+                                                                    <option value="Hospital">Hospital</option>
+                                                                    <option value="Laboratory">Laboratory</option>
+                                                                    <option value="Investor">Investor</option>
+                                                                    <option value="Job Seeker">Job Seeker</option>
+                                                                </select>
+                                                            {/* <datalist id="details">
                                                                 <option value="Patient" />
                                                                 <option value="Doctor" />
                                                                 <option value="Business Owner" />
@@ -142,7 +155,7 @@ function ContactUs() {
                                                                 <option value="Laboratory" />
                                                                 <option value="Investor" />
                                                                 <option value="Job Seeker" />
-                                                            </datalist>
+                                                            </datalist> */}
                                                             <div className="error-message1">
                                                                 {errors.message && touched.message && errors.message}
                                                             </div>

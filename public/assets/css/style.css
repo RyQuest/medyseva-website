@@ -1516,6 +1516,19 @@ text-transform: capitalize;
   height: 50px;
   border-radius: 10px;
 }
+#contact-info .contact-form .input-field select {
+  border: none;
+  outline: none;
+  box-shadow: none;
+  width: 100%;
+  background-color: #d5e2ef;
+  padding: 5px 20px;
+  height: 50px;
+  border-radius: 10px;
+}
+#contact-info .contact-form .input-field select  option {
+  background-color: white;
+}
 #contact-info .contact-form .input-field textarea {
   border: none;
   outline: none;
@@ -1709,8 +1722,10 @@ text-transform: capitalize;
   padding: 0.5rem;
 }
 #about-us .modal-header h5 {
-  font-family: serif;
-  font-weight: 750;
+  /* font-family: serif; */
+  font-family: var(--Montserrat);
+  color: var(--primary-color); 
+  font-weight: 600;
     font-size: 2rem;
 }
 #about-us .modal-body p {
@@ -1745,9 +1760,10 @@ text-transform: capitalize;
   border-bottom: 1px solid #ddd;
 }
 #Specialities .modal-header h5 {
-  font-family: serif;
+  font-family: var(--Montserrat);
+  color: var(--primary-color); 
   font-weight: 600;
-  font-size: 2rem;
+    font-size: 2rem;
 }
 
 #join-form .head-modal button {

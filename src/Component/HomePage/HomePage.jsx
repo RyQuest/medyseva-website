@@ -932,6 +932,7 @@ export default function HomePage() {
                         <div className="modal-content">
                             <div className="modal-header">
                                 <h5 className="modal-title" id="exampleModalLabel">About Us</h5>
+                                {/*     color: var(--primary-color); */}
                                 <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
                             <div className="modal-body">
