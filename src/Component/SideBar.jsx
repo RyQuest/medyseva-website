@@ -21,7 +21,7 @@ function SideBar() {
                         <div className="navs">
                             <ul>
                                 <li>
-                                    <a href="#about" >About Us</a>
+                                    <a id='slide11' href="#about" >About Us</a>
                                     {/* <div className="sub-menu">
                                         <ul>
                                             <li>
@@ -38,31 +38,31 @@ function SideBar() {
                                     <div className="sub-menu">
                                         <ul>
                                             <li>
-                                                <a href="#services">Consultation</a>
+                                                <a id='slide11' href="#services">Consultation</a>
                                             </li>
                                             <li>
-                                                <a href="#services ">Pathology</a>
+                                                <a id='slide11' href="#services ">Pathology</a>
                                             </li>
                                             <li>
-                                                <a href=" #services">Radiology</a>
+                                                <a id='slide11' href=" #services">Radiology</a>
                                             </li>
                                             <li>
-                                                <a href=" #services">Hospitalization</a>
+                                                <a id='slide11' href=" #services">Hospitalization</a>
                                             </li>
                                             <li>
-                                                <a href=" #services">Ambulance</a>
+                                                <a id='slide11' href=" #services">Ambulance</a>
                                             </li>
                                         </ul>
                                     </div>
                                 </li>
                                 <li>
-                                    <a href="#team">Team</a>
+                                    <a id='slide11' href="#team">Team</a>
                                 </li>
                                 <li>
-                                    <a href="#gallery">Gallery</a>
+                                    <a id='slide11' href="#gallery">Gallery</a>
                                 </li>
                                 <li>
-                                    <a href="#contact-info">Contact Us</a>
+                                    <a id='slide11' href="#contact-info">Contact Us</a>
                                 </li>
                                 {/* <li>
                                     <a href>Join Us</a>

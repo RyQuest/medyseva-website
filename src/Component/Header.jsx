@@ -43,7 +43,16 @@ function toggleNav($) {
     });
 
 
+
+
     // Side-menu Drop-Down ==============================
+
+    $('.side-menu .navs #slide11').click(function () {
+        setTimeout(function(){
+            $(sideMenu).removeClass('active');
+        },1000)
+        $('body').css({ 'overflow': '' });
+    })
 
     var sideMenu_subMenu = $('.side-menu .navs > ul > li > .sub-menu');
     $(sideMenu_subMenu).prev('a').addClass('down-arrow');
