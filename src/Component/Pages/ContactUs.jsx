@@ -8,7 +8,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 function ContactUs() {
     const validationSchema = Yup.object({
-        name: Yup.string().trim().required('Name is required'),
+        name: Yup.string().required('Name is required'),
         email: Yup.string().email().typeError().required('E-mail id required'),
         mobile: Yup.string()
             .trim()

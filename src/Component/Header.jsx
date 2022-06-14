@@ -140,7 +140,7 @@ function Header() {
                                     <a href="#about">About Us</a>
                                 </li>
                                 <li>
-                                    <a href="#services">Services</a>
+                                    <a href="#">Services</a>
                                     <div className="sub-menu">
                                         <ul>
                                             <li>

@@ -857,6 +857,7 @@ background-image: url(../img/texture.png);
   font-family: var(--Montserrat);
   font-weight: normal;
   padding-bottom: 50px;
+  margin-top: 47px;
 }
 #services .h-100 {
   height: 100%;
@@ -922,6 +923,7 @@ background-image: url(../img/texture.png);
   font-family: var(--Montserrat);
   font-weight: normal;
   padding-bottom: 50px;
+  margin-top: 47px;
 }
 #gallery .gallery-slider .h-100 {
   height: 100%;
@@ -995,6 +997,7 @@ background-image: url(../img/texture.png);
   font-family: var(--Montserrat);
   font-weight: normal;
   padding-bottom: 50px;
+  margin-top: 47px;
 }
 
 #doctors .doctor-slider .h-100 {
@@ -1286,6 +1289,7 @@ background-image: url(../img/texture.png);
   font-family: var(--Montserrat);
   font-weight: normal;
   padding-bottom: 15px;
+  margin-top: 47px;
 }
 
 #award {
