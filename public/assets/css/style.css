@@ -1739,7 +1739,7 @@ text-transform: capitalize;
   padding: 0rem 1.5rem !important;
 }
 #about-us .modal-body p span {
-  color: rgb(77, 80, 154);
+  color: var(--primary-color); 
   font-weight: bold;
   font-size: 18px;
 }
