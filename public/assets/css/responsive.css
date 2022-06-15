@@ -98,6 +98,7 @@
     font-family: var(--Poppins);
     font-weight: bold;
     padding-bottom: 50px;
+    margin-top: 60px;
 }
 #journey .img img {
     width: 100%;
@@ -117,6 +118,7 @@
     font-family: var(--Poppins);
     font-weight: bold;
     padding-bottom: 30px;
+    margin-top: 60px;
 }
 #doctors .head h2 {
     text-align: center;

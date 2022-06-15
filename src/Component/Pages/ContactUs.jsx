@@ -35,11 +35,35 @@ function ContactUs() {
         type:""
     })
     const formdata = (event)=>{
+        
         const name = event.target.name
         const value = event.target.value
         setInputdata({...inputdata,[name]:value})
+       
     }
     const myfunction = async () => {
+        if(inputdata.name == ""){
+            document.getElementById("error-message1").innerHTML = "Name is required"
+        }else {
+            document.getElementById("error-message1").innerHTML = ""
+        }
+        if(inputdata.mobile == ""){
+            document.getElementById("error-message12").innerHTML = "Phone number is required"
+        }else {
+            document.getElementById("error-message12").innerHTML = ""
+        }
+        if(inputdata.email == ""){
+            document.getElementById("error-message13").innerHTML = "Email is required"
+        }else {
+            document.getElementById("error-message13").innerHTML = ""
+        }
+        if(inputdata.type == ""){
+            document.getElementById("error-message14").innerHTML = "Select one of them"
+        }
+        else{
+            document.getElementById("error-message14").innerHTML = ""
+        }
+      
         console.log(inputdata);
         // console.log(values)
         // const payload = { ...values }
@@ -47,9 +71,19 @@ function ContactUs() {
         const response = await axios.post('https://api.medyseva.com/api/contact_us', inputdata)
             .then((response) => {
                 console.log(response);
-                toast(response.data.msg)
+                if(response){
+                    toast("Data submitted successfully ")
+                }
             }).catch((err) => {
-                toast(err.message);
+                if(err){
+                    toast("All fields are mandatory to fill");
+                }
+            })
+            setInputdata({
+                name:"",
+                email:"",
+                mobile:"",
+                type:""
             })
     }
 
@@ -93,16 +127,16 @@ function ContactUs() {
                                                         <input type="text" name="name" value={inputdata.name} placeholder="Name*" onChange={formdata} 
                                                             onBlur={handleBlur} />
                                                     </div>
-                                                    <div className="error-message1">
-                                                        {errors.name && touched.name && errors.name}
+                                                    <div id="error-message1" style={{color:"red",textAlign:"center"}}>
+                                                        {/* {errors.name && touched.name && errors.name} */}
                                                     </div>
                                                     <div className="col-md-12">
                                                         <div className="input-field">
                                                             <input type="number" name="mobile" value={inputdata.mobile} placeholder="Mobile" onChange={formdata} 
                                                                 onBlur={handleBlur} />
                                                         </div>
-                                                        <div className="error-message1">
-                                                            {errors.number && touched.number && errors.number}
+                                                        <div id="error-message12"  style={{color:"red",textAlign:"center"}}>
+                                                            {/* {errors.number && touched.number && errors.number} */}
                                                         </div>
                                                     </div>
                                                     <div className="col-md-12">
@@ -110,8 +144,8 @@ function ContactUs() {
                                                             <input type="email" name="email" value={inputdata.email} placeholder="Email*" onChange={formdata} 
                                                                 onBlur={handleBlur} />
                                                         </div>
-                                                        <div className="error-message1">
-                                                            {errors.email && touched.email && errors.email}
+                                                        <div id="error-message13"  style={{color:"red",textAlign:"center"}}>
+                                                            {/* {errors.email && touched.email && errors.email} */}
                                                         </div>
                                                     </div>
                                                     <div className="col-md-12">
@@ -156,8 +190,8 @@ function ContactUs() {
                                                                 <option value="Investor" />
                                                                 <option value="Job Seeker" />
                                                             </datalist> */}
-                                                            <div className="error-message1">
-                                                                {errors.message && touched.message && errors.message}
+                                                            <div id="error-message14"  style={{color:"red",textAlign:"center"}}>
+                                                            
                                                             </div>
                                                         </div>
                                                     </div>
