@@ -377,13 +377,13 @@ export default function HomePage() {
                                 </div>
                                 <div className="col-sm-3">
                                     <div className="specialist-box">
-                                        <img className="doc-img" src="assets/img/specialist4.png" />
-                                        <h3>Physiotherapy</h3>
+                                        <img className="doc-img" src="assets/img/image_2022_06_08T13_24_15_286Z.png" />
+                                        <h3>MD Medicine</h3>
                                     </div>
                                 </div>
                                 <div className="col-sm-3">
                                     <div className="specialist-box">
-                                        <img className="doc-img" src="assets/img/png-transparent-cardiology-computer-icons-heart-cardiovascular-disease-heart-text-hand-heart-thumbnail.png" />
+                                        <img className="doc-img" src="assets/img/pngwing.com.png" />
                                         <h3>Cardiology</h3>
                                     </div>
                                 </div>
