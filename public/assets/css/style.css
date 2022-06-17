@@ -607,6 +607,9 @@ header .header .btns-box .contact-btn .contact-info .info a:hover {
 #banner-slider .owl-nav .owl-next:hover {
   background: #000 !important;
 }
+#banner-slider .owl-nav .owl-prev:hover {
+  background: #000 !important;
+}
 #banner-slider :hover .owl-prev {
   left: 0px;
   opacity: 1;
@@ -1878,4 +1881,7 @@ text-transform: capitalize;
 
 .widthmodle{
   width: 400px;
+}
+.footer_add{
+  padding-left: 15px;
 }

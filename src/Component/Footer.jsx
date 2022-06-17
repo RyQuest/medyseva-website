@@ -42,10 +42,20 @@ function Footer() {
                                         <a href><i className="fas fa-envelope" /> &nbsp; info@medyseva.com</a>
                                     </li>
                                     <li>
-                                        <p><i class="fas fa-map-marker-alt"></i> &nbsp;   Registered Office:
+                                        <div style={{display:"flex"}}>
+                                        <div>
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        </div>
+                                        <div>
+                                            <p className='footer_add'>Registered Office:
                                             18A, Electronic Complex,
                                             Pardesipura,
-                                            Indore - 452010*</p>
+                                            Indore - 452010</p>
+                                        </div></div>
+                                        {/* <p><i class="fas fa-map-marker-alt"></i> &nbsp;    Registered Office:
+                                            18A, Electronic Complex,
+                                            Pardesipura,
+                                            Indore - 452010</p> */}
                                     </li>
                                 </ul>
                             </div>
