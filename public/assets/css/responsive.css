@@ -30,8 +30,8 @@
     font-size: 32px;
 }
 #banner-slider .slide .cover .header-content .head h2 {
-    font-size: 20px;
     font-family: var(--Poppins);
+    font-size: 20px;
     color: #fff;
     position: relative;
     text-align: left;
@@ -41,8 +41,8 @@
     #banner-slider .slide .cover .header-content .head ul li {
     font-family: var(--primary-color);
     color: #fff;
-    font-size: 15px;
     position: relative;
+    font-size: 15px;
     line-height: 32px;
     list-style: none;
     padding-bottom: 10px;

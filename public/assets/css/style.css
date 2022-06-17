@@ -581,9 +581,6 @@ header .header .btns-box .contact-btn .contact-info .info a:hover {
 #banner-slider .owl-nav .owl-prev:focus {
   outline: 0;
 }
-#banner-slider .owl-nav .owl-prev:hover {
-  background: #a5a5a7 !important;
-}
 #banner-slider .owl-nav .owl-next {
   position: absolute;
   right: 15px;
@@ -1883,5 +1880,6 @@ text-transform: capitalize;
   width: 400px;
 }
 .footer_add{
+  
   padding-left: 15px;
 }
