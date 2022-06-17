@@ -8,22 +8,22 @@
 
 #banner-slider .slide1 {
     height: 600px;
-  background: rgba(0, 0, 0, 0.4) url("../img/banner/MedySeva HeaderImages-04.jpg") no-repeat center center/cover;
+  background: rgba(0, 0, 0, 0.5) url("../img/banner/New Images H-04.jpg") no-repeat center center/cover;
   background-blend-mode: darken;
 }
 #banner-slider .slide2 {
     height: 600px;
-  background: rgba(0, 0, 0, 0.4)  url("../img/banner/MedySeva HeaderImages-01.jpg") no-repeat center center/cover;
+  background: rgba(0, 0, 0, 0.5)  url("../img/banner/New Images H-01.jpg") no-repeat center center/cover;
   background-blend-mode: darken;
 }
 #banner-slider .slide3 {
     height: 600px;
-  background: rgba(0, 0, 0, 0.4)  url("../img/banner/MedySeva HeaderImages-02.jpg") no-repeat center center/cover;
+  background: rgba(0, 0, 0, 0.5)  url("../img/banner/New Images H-02.jpg") no-repeat center center/cover;
   background-blend-mode: darken;
 }
 #banner-slider .slide4 {
     height: 600px;
-  background: rgba(0, 0, 0, 0.4)  url("../img/banner/MedySeva HeaderImages-03.jpg") no-repeat center center/cover;
+  background: rgba(0, 0, 0, 0.5)  url("../img/banner/New Images H-03.jpg") no-repeat center center/cover;
   background-blend-mode: darken;
 }
 #about-us .head h2 {
