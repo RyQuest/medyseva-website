@@ -7,6 +7,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 
 function ContactUs() {
+    const [formerror,setFormError] = useState("")
     const validationSchema = Yup.object({
         name: Yup.string().required('Name is required'),
         email: Yup.string().email().typeError().required('E-mail id required'),
@@ -42,29 +43,45 @@ function ContactUs() {
        
     }
     const myfunction = async () => {
-        if(inputdata.name == ""){
-            document.getElementById("error-message1").innerHTML = "Name is required"
-        }else {
-            document.getElementById("error-message1").innerHTML = ""
+        let regex = new RegExp("[a-z0-9]+@[a-z]+.[a-z]{2,3}");
+        if(!inputdata.name){
+            setFormError("Please enter name")
         }
-        if(inputdata.mobile == ""){
-            document.getElementById("error-message12").innerHTML = "Phone number is required"
-        }else {
-            document.getElementById("error-message12").innerHTML = ""
+        else if(!inputdata.mobile || inputdata.mobile.length < 10){
+            setFormError("Please enter 10 digit phone number")
         }
-        if(inputdata.email == ""){
-            document.getElementById("error-message13").innerHTML = "Email is required"
-        }else {
-            document.getElementById("error-message13").innerHTML = ""
+        else if(!regex.test(inputdata.email)){
+            setFormError("Please provide valid email")
         }
-        if(inputdata.type == ""){
-            document.getElementById("error-message14").innerHTML = "Select one of them"
+        else if(!inputdata.type){
+            setFormError("Please select you role")
         }
         else{
-            document.getElementById("error-message14").innerHTML = ""
-        }
+
+        
+        // if(inputdata.name == ""){
+        //     document.getElementById("error-message1").innerHTML = "Name is required"
+        // }else {
+        //     document.getElementById("error-message1").innerHTML = ""
+        // }
+        // if(inputdata.mobile.length == 10 ){
+        //     document.getElementById("error-message12").innerHTML = "Phone number is required"
+        // }else {
+        //     document.getElementById("error-message12").innerHTML = ""
+        // }
+        // if(inputdata.email == ""){
+        //     document.getElementById("error-message13").innerHTML = "Email is required"
+        // }else {
+        //     document.getElementById("error-message13").innerHTML = ""
+        // }
+        // if(inputdata.type == ""){
+        //     document.getElementById("error-message14").innerHTML = "Select one of them"
+        // }
+        // else{
+        //     document.getElementById("error-message14").innerHTML = ""
+        // }
       
-        console.log(inputdata);
+        // console.log(inputdata.mobile.length);
         // console.log(values)
         // const payload = { ...values }
         // console.log(payload);
@@ -72,11 +89,11 @@ function ContactUs() {
             .then((response) => {
                 console.log(response);
                 if(response){
-                    toast("Data submitted successfully ")
+                    toast.success("Data submitted successfully ")
                 }
             }).catch((err) => {
                 if(err){
-                    toast("All fields are mandatory to fill");
+                    toast.warn("All fields are mandatory to fill");
                 }
             })
             setInputdata({
@@ -85,6 +102,7 @@ function ContactUs() {
                 mobile:"",
                 type:""
             })
+        }
     }
 
     return (
@@ -196,6 +214,7 @@ function ContactUs() {
                                                         </div>
                                                     </div>
                                                     <div className="col-md-12">
+                                                   <h5 style={{fontSize:"20px",color:"red"}}> {formerror}</h5>
                                                         <div className="input-field d-flex justify-content-center">
                                                             <input onClick={()=>{
                                                                 myfunction()
