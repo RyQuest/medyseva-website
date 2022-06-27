@@ -48,7 +48,7 @@ function ContactUs() {
             setFormError("Please enter name")
         }
         else if(!inputdata.mobile || inputdata.mobile.length < 10){
-            setFormError("Please enter 10 digit phone number")
+            setFormError("Please enter valid phone number")
         }
         else if(!regex.test(inputdata.email)){
             setFormError("Please provide valid email")
