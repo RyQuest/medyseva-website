@@ -43,9 +43,11 @@ function ContactUs() {
        
     }
     const myfunction = async () => {
+        // const fullnameregexp = /^\S*$/;
+        let nameregex = new RegExp("^[a-zA-Z_ ]{1,30}$")
         let regex = new RegExp("[a-z0-9]+@[a-z]+.[a-z]{2,3}");
-        if(!inputdata.name){
-            setFormError("Please enter name")
+        if(!nameregex.test(inputdata.name)){
+            setFormError("Please enter valid name")
         }
         else if(!inputdata.mobile || inputdata.mobile.length < 10){
             setFormError("Please enter valid phone number")
@@ -214,7 +216,7 @@ function ContactUs() {
                                                         </div>
                                                     </div>
                                                     <div className="col-md-12">
-                                                   <h5 style={{fontSize:"20px",color:"red"}}> {formerror}</h5>
+                                                   <h5 style={{fontSize:"20px",color:"red",textAlign:"center"}}> {formerror}</h5>
                                                         <div className="input-field d-flex justify-content-center">
                                                             <input onClick={()=>{
                                                                 myfunction()
