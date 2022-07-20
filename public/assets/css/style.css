@@ -511,7 +511,10 @@ header .header .btns-box .contact-btn .contact-info .info a:hover {
 #home-banner .img img {
   width: 100%;
 }
-
+/* .services-slider .slide{
+  margin: 0 10px !important;
+  gap:15%;
+} */
 #banner-slider .slide1 {
   /* height: 100%; */
   /* position: relative; */
@@ -616,7 +619,7 @@ header .header .btns-box .contact-btn .contact-info .info a:hover {
   opacity: 1;
 }
 
-#banner-slider .slide .cover .header-content .head h2 {
+#banner-slider .slide  .header-content .head h2 {
   font-size: 40px;
   font-family: var(--Montserrat);
   color: #fff;
@@ -627,7 +630,7 @@ header .header .btns-box .contact-btn .contact-info .info a:hover {
   font-weight: normal;
   padding-bottom: 10px;
 }
-#banner-slider .slide .cover .header-content .head h2:before {
+#banner-slider .slide  .header-content .head h2:before {
   content: "";
   background-color: #fff;
   position: absolute;
@@ -636,15 +639,15 @@ header .header .btns-box .contact-btn .contact-info .info a:hover {
   height: 80%;
   left: 0px;
 }
-#banner-slider .slide .cover .header-content .head p {
+#banner-slider .slide  .header-content .head p {
   color: #fff;
   padding: 20px 0 0;
 }
-#banner-slider .slide .cover .header-content .head ul {
+#banner-slider .slide  .header-content .head ul {
   margin: 0;
   padding: 15px 5px;
 }
-#banner-slider .slide .cover .header-content .head ul li {
+#banner-slider .slide  .header-content .head ul li {
   font-family: var(--primary-color);
   color: #fff;
   font-size: 18px;
@@ -653,7 +656,7 @@ header .header .btns-box .contact-btn .contact-info .info a:hover {
   list-style: none;
   font-weight: normal;
 }
-#banner-slider .slide .cover .header-content .head ul li::before {
+#banner-slider .slide  .header-content .head ul li::before {
   display: inline-block;
   content: "";
   -webkit-border-radius: 0.375rem;
@@ -864,6 +867,7 @@ background-image: url(../img/texture.png);
 }
 #services .services-slider .service-card {
   height: 100%;
+  margin: 0 10px;
 }
 #services .services-slider .service-card .card img {
   width: 100%;
@@ -1882,4 +1886,9 @@ text-transform: capitalize;
 .footer_add{
   
   padding-left: 15px;
+}
+.slick-prev:before,
+.slick-next:before {
+  color: black;
+  z-index: 1;
 }

@@ -7,7 +7,7 @@ import { Formik } from 'formik';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { axios } from '../../http';
-
+import Slider from "react-slick";
 
 export default function HomePage() {
     const startone =()=>{
@@ -74,17 +74,136 @@ export default function HomePage() {
         center_address: Yup.string().required("Address is required")
     })
 
+    // 
+        
+
+        const settings = {
+       
+      dots: true,
+      infinite: true,
+      speed: 500,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      initialSlide: 0,
+      autoplay: true,
+      autoplaySpeed: 7000,
+      responsive: [
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 3,
+            infinite: true,
+            dots: true
+          }
+        },
+        {
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 2,
+            initialSlide: 2
+          }
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        }
+      ]
+        }
+        const settings1 = {
+            dots: true,
+            infinite: true,
+            speed: 500,
+            slidesToShow: 4,
+            slidesToScroll: 4,
+            initialSlide: 0,
+            autoplay: true,
+            autoplaySpeed: 3000,
+            responsive: [
+              {
+                breakpoint: 1024,
+                settings: {
+                  slidesToShow: 3,
+                  slidesToScroll: 3,
+                  infinite: true,
+                  dots: true
+                }
+              },
+              {
+                breakpoint: 600,
+                settings: {
+                  slidesToShow: 2,
+                  slidesToScroll: 2,
+                  initialSlide: 2
+                }
+              },
+              {
+                breakpoint: 480,
+                settings: {
+                  slidesToShow: 1,
+                  slidesToScroll: 1
+                }
+              }
+            ]
+          }
+
+       
+
+          const settings2 = {
+        
+            dots: true,
+            infinite: true,
+            speed: 500,
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            initialSlide: 0,
+            autoplay: true,
+            autoplaySpeed: 3000,
+            responsive: [
+              {
+                breakpoint: 1024,
+                settings: {
+                  slidesToShow: 3,
+                  slidesToScroll: 3,
+                  infinite: true,
+                  dots: true
+                }
+              },
+              {
+                breakpoint: 600,
+                settings: {
+                  slidesToShow: 2,
+                  slidesToScroll: 2,
+                  initialSlide: 2
+                }
+              },
+              {
+                breakpoint: 480,
+                settings: {
+                  slidesToShow: 1,
+                  slidesToScroll: 1
+                }
+              }
+            ]
+          }
+
     return (
         <>
+
             <div >
                 <PageLayout />
                 <div>
                     <section id="banner-slider">
                         <div className="top-banner-slider">
-                            <div className="owl-carousel">
+                            {/* <div className="owl-carousel"> */}
+                            <Slider {...settings}>
                                 <div className="slide slide1">
                                     {/* <img src="assets/img/banner/banner1.jpg" alt="images not found" /> */}
-                                    <div className="cover">
+                                    {/* <div className="cover"> */}
                                         <div className="container">
                                             <div className="header-content">
                                                 <div className="head">
@@ -97,11 +216,11 @@ export default function HomePage() {
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
+                                    {/* </div> */}
                                 </div>
                                 <div className="slide slide2">
                                     {/* <img src="assets/img/banner/banner2.jpg" alt="images not found" /> */}
-                                    <div className="cover">
+                                    {/* <div className="cover"> */}
                                         <div className="container">
                                             <div className="header-content">
                                                 <div className="head">
@@ -115,11 +234,11 @@ export default function HomePage() {
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
+                                    {/* </div> */}
                                 </div>
                                 <div className="slide slide3">
                                     {/* <img src="assets/img/banner/banner3.jpg" alt="images not found" /> */}
-                                    <div className="cover">
+                                    {/* <div className="cover"> */}
                                         <div className="container">
                                             <div className="header-content">
                                                 <div className="head">
@@ -133,11 +252,11 @@ export default function HomePage() {
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
+                                    {/* </div> */}
                                 </div>
                                 <div className="slide slide4">
                                     {/* <img src="assets/img/banner/banner4.jpg" alt="images not found" /> */}
-                                    <div className="cover">
+                                    {/* <div className="cover"> */}
                                         <div className="container">
                                             <div className="header-content">
                                                 <div className="head">
@@ -148,10 +267,12 @@ export default function HomePage() {
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
+                                    {/* </div> */}
                                 </div>
+                                </Slider>
                             </div>
-                        </div>
+
+                        
                     </section>
 
                     <section id="video">
@@ -249,7 +370,8 @@ export default function HomePage() {
                                 </div>
                                 <div className="col-md-12">
                                     <div className="services-slider">
-                                        <div className="owl-carousel">
+                                        {/* <div className="owl-carousel"> */}
+                                        <Slider {...settings1}>
                                             <div className="slide">
                                                 <div className="h-100">
                                                     <div className="service-card">
@@ -333,7 +455,9 @@ export default function HomePage() {
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>
+                                            </Slider>
+                                      
+
                                     </div>
                                 </div>
                             </div>
@@ -616,7 +740,8 @@ export default function HomePage() {
                                 </div>
                                 <div className="col-md-12">
                                     <div className="gallery-slider">
-                                        <div className="owl-carousel">
+                                        {/* <div className="owl-carousel"> */}
+                                        <Slider {...settings2}>
                                             <div className="slide">
                                                 <div className="h-100">
                                                     <div className="gallery-card">
@@ -682,8 +807,9 @@ export default function HomePage() {
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>
+                                        </Slider>
                                     </div>
+                                    
                                 </div>
                             </div>
                         </div>
