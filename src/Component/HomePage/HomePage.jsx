@@ -91,7 +91,7 @@ export default function HomePage() {
         {
           breakpoint: 1024,
           settings: {
-            slidesToShow: 3,
+            slidesToShow: 1,
             slidesToScroll: 3,
             infinite: true,
             dots: true
@@ -100,7 +100,7 @@ export default function HomePage() {
         {
           breakpoint: 600,
           settings: {
-            slidesToShow: 2,
+            slidesToShow: 1,
             slidesToScroll: 2,
             initialSlide: 2
           }
@@ -567,22 +567,22 @@ export default function HomePage() {
                                 </div>
                                 <div className="col-lg-3 stats col-6">
                                     <img src="assets/img/counter/one.png" />
-                                    <div className="counting" data-count={2500} id="plus">0</div>
+                                    <div className="counting" id="plus">2500</div>
                                     <h5>CONSULTATIONS</h5>
                                 </div>
                                 <div className="col-lg-3 stats col-6">
                                     <img src="assets/img/counter/two.png" />
-                                    <div className="counting" data-count={23} id="plus">0</div>
+                                    <div className="counting" id="plus">23</div>
                                     <h5>SPECIALTIES COVERED</h5>
                                 </div>
                                 <div className="col-lg-3 stats col-6">
                                     <img src="assets/img/counter/three.png" />
-                                    <div className="counting" data-count={200} id="plus">0</div>
+                                    <div className="counting"  id="plus">200</div>
                                     <h5>DOCTORS ON BOARD</h5>
                                 </div>
                                 <div className="col-lg-3 stats col-6">
                                     <img src="assets/img/counter/four.png" />
-                                    <div className="counting" data-count={15} id="plus">0</div>
+                                    <div className="counting"  id="plus">15</div>
                                     <h5>MEDYSEVA KENDRA</h5>
                                 </div>
                             </div>
