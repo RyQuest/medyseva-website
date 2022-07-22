@@ -1172,7 +1172,7 @@ background-image: url(../img/texture.png);
 }
 .team-medi-box .other-info-box p {
   margin-bottom: 2px;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: bold;
   text-align: center;
 }
@@ -1908,9 +1908,7 @@ text-transform: capitalize;
   font-weight: 200;
 }
 
-.location{
-  margin-left: 8%;
-}
+
 .slick-next{
   right: 15px;
   position:absolute;

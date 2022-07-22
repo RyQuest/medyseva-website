@@ -50,20 +50,21 @@ function ContactUs() {
         // const fullnameregexp = /^\S*$/;
         let nameregex = new RegExp("^[a-zA-Z_ ]{1,30}$")
         let regex = new RegExp("[a-z0-9]+@[a-z]+.[a-z]{2,3}");
+        
         if(!nameregex.test(inputdata.name)){
             setNameError("Please enter valid name")
             setMobileError("")
             setEmailError("")
             setFieldError("")
         }
-       else if(!inputdata.mobile || inputdata.mobile.length < 10){
+       else if(!inputdata.mobile || inputdata.mobile.length !== 10){
             setMobileError("Please enter valid phone number")
             setNameError("")
             setEmailError("")
             setFieldError("")
         }
          else if(!regex.test(inputdata.email)){
-            setEmailError("Please provide valid email")
+            setEmailError("Please enter valid email")
             setMobileError("")
             setNameError("")
             setFieldError("")
@@ -111,7 +112,7 @@ function ContactUs() {
             .then((response) => {
                 console.log(response);
                 if(response){
-                    toast.success("Data submitted successfully ")
+                    toast.success("Thank You for contacting us")
                 }
             }).catch((err) => {
                 if(err){
