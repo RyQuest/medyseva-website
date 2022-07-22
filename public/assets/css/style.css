@@ -59,9 +59,9 @@ input[type="number"] {
   right: 0;
   top: 50%;
   transform: translateY(-50%);
-  z-index: 1;
   display: flex;
   align-items: center;
+  z-index: 1;
   justify-content: space-between;
   pointer-events: none;
 }
@@ -620,7 +620,7 @@ header .header .btns-box .contact-btn .contact-info .info a:hover {
 }
 
 #banner-slider .slide  .header-content .head h2 {
-  font-size: 40px;
+  font-size: 32px;
   font-family: var(--Montserrat);
   color: #fff;
   position: relative;
@@ -702,6 +702,7 @@ margin-left: 24px;}
 #about-us .head h2 span {
   color: #890304;
 }
+
 #about-us .img-contain-left .img {
   position: relative;
 }
@@ -1887,8 +1888,50 @@ text-transform: capitalize;
   
   padding-left: 15px;
 }
-.slick-prev:before,
-.slick-next:before {
-  color: black;
+/* changes */
+/* .slick-next:before {
+  color: white;
   z-index: 1;
+  margin-left: -200%;
+
+}
+.slick-prev:before{
+  color: white;
+  z-index: 1;
+  margin-right: -200%;
+  height: 140px ;
+  width: 140px ;
+  border-radius: 80%;
+} */
+
+.header-content > h2{
+  font-weight: 200;
+}
+
+.location{
+  margin-left: 8%;
+}
+.slick-next{
+  right: 15px;
+  position:absolute;
+
+}
+.slick-prev{
+  left: 3px ;
+}
+.slick-next:before{
+  font-size: 33px;
+
+}
+.slick-prev:before {
+  font-size: 33px;
+  /* position: sticky; */
+  background-color: black;
+  z-index: 50;
+}
+.top-banner-slider .slick-next{
+  display: none !important;
+}
+.top-banner-slider .slick-prev{
+  display: none !important;
 }

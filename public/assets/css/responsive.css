@@ -5,6 +5,13 @@
     height: 100%;
     padding: 30px 0px;
 }
+.testbr{
+    display: none;
+}
+#banner-slider .slide  .header-content .head h2 {
+    font-size: 25px;
+    line-height: 35px;
+}
 
 #banner-slider .slide1 {
     height: 600px;
@@ -700,7 +707,7 @@
     margin-bottom: 40px;
 }
 #banner-slider .slide .cover .header-content .head h2 {
-    font-size: 32px;
+    font-size: 25px;
     font-family: var(--Poppins);
     color: #fff;
     position: relative;

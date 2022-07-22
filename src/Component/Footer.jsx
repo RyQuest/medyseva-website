@@ -43,7 +43,7 @@ function Footer() {
                                     </li>
                                     <li>
                                         <div style={{display:"flex"}}>
-                                        <div>
+                                        <div className='location'>
                                         <i class="fas fa-map-marker-alt"></i>
                                         </div>
                                         <div>

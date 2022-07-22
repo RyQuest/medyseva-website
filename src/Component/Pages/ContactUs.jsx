@@ -7,7 +7,11 @@ import 'react-toastify/dist/ReactToastify.css';
 
 
 function ContactUs() {
-    const [formerror,setFormError] = useState("")
+    const [nameerror,setNameError] = useState("")
+    const [mobileerror,setMobileError] = useState("")
+    const [emailerror,setEmailError] = useState("")
+    const [fielderror,setFieldError] = useState("")
+
     const validationSchema = Yup.object({
         name: Yup.string().required('Name is required'),
         email: Yup.string().email().typeError().required('E-mail id required'),
@@ -47,19 +51,35 @@ function ContactUs() {
         let nameregex = new RegExp("^[a-zA-Z_ ]{1,30}$")
         let regex = new RegExp("[a-z0-9]+@[a-z]+.[a-z]{2,3}");
         if(!nameregex.test(inputdata.name)){
-            setFormError("Please enter valid name")
+            setNameError("Please enter valid name")
+            setMobileError("")
+            setEmailError("")
+            setFieldError("")
         }
-        else if(!inputdata.mobile || inputdata.mobile.length < 10){
-            setFormError("Please enter valid phone number")
+       else if(!inputdata.mobile || inputdata.mobile.length < 10){
+            setMobileError("Please enter valid phone number")
+            setNameError("")
+            setEmailError("")
+            setFieldError("")
         }
-        else if(!regex.test(inputdata.email)){
-            setFormError("Please provide valid email")
+         else if(!regex.test(inputdata.email)){
+            setEmailError("Please provide valid email")
+            setMobileError("")
+            setNameError("")
+            setFieldError("")
         }
-        else if(!inputdata.type){
-            setFormError("Please select you role")
+         else if(!inputdata.type){
+            setFieldError("Please select you role")
+            setMobileError("")
+            setNameError("")
+            setEmailError("")
+           
         }
-        else{
-
+        else {
+            setNameError("")
+            setMobileError("")
+            setEmailError("")
+            setFieldError("")
         
         // if(inputdata.name == ""){
         //     document.getElementById("error-message1").innerHTML = "Name is required"
@@ -95,7 +115,7 @@ function ContactUs() {
                 }
             }).catch((err) => {
                 if(err){
-                    toast.warn("All fields are mandatory to fill");
+                    toast.warn(err.response.data.message);
                 }
             })
             setInputdata({
@@ -147,16 +167,20 @@ function ContactUs() {
                                                         <input type="text" name="name" value={inputdata.name} placeholder="Name*" onChange={formdata} 
                                                             onBlur={handleBlur} />
                                                     </div>
-                                                    <div id="error-message1" style={{color:"red",textAlign:"center"}}>
+                                                    <div id="error-message1" style={{color:"red"}}>
                                                         {/* {errors.name && touched.name && errors.name} */}
+                                                        <h5 style={{fontSize:"20px",color:"red"}}> {nameerror}</h5>
+
                                                     </div>
                                                     <div className="col-md-12">
                                                         <div className="input-field">
-                                                            <input type="number" name="mobile" value={inputdata.mobile} placeholder="Mobile" onChange={formdata} 
+                                                            <input type="number" name="mobile" value={inputdata.mobile} placeholder="Mobile*" onChange={formdata} 
                                                                 onBlur={handleBlur} />
                                                         </div>
-                                                        <div id="error-message12"  style={{color:"red",textAlign:"center"}}>
+                                                        <div id="error-message12"  style={{color:"red"}}>
                                                             {/* {errors.number && touched.number && errors.number} */}
+                                                            <h5 style={{fontSize:"20px",color:"red"}}> {mobileerror}</h5>
+
                                                         </div>
                                                     </div>
                                                     <div className="col-md-12">
@@ -164,8 +188,10 @@ function ContactUs() {
                                                             <input type="email" name="email" value={inputdata.email} placeholder="Email*" onChange={formdata} 
                                                                 onBlur={handleBlur} />
                                                         </div>
-                                                        <div id="error-message13"  style={{color:"red",textAlign:"center"}}>
+                                                        <div id="error-message13"  style={{color:"red"}}>
                                                             {/* {errors.email && touched.email && errors.email} */}
+                                                            <h5 style={{fontSize:"20px",color:"red"}}> {emailerror}</h5>
+
                                                         </div>
                                                     </div>
                                                     <div className="col-md-12">
@@ -210,13 +236,11 @@ function ContactUs() {
                                                                 <option value="Investor" />
                                                                 <option value="Job Seeker" />
                                                             </datalist> */}
-                                                            <div id="error-message14"  style={{color:"red",textAlign:"center"}}>
                                                             
-                                                            </div>
                                                         </div>
                                                     </div>
                                                     <div className="col-md-12">
-                                                   <h5 style={{fontSize:"20px",color:"red",textAlign:"center"}}> {formerror}</h5>
+                                                   <h5 style={{fontSize:"20px",color:"red"}}> {fielderror}</h5>
                                                         <div className="input-field d-flex justify-content-center">
                                                             <input onClick={()=>{
                                                                 myfunction()
@@ -233,7 +257,7 @@ function ContactUs() {
 
                         <div className="col-md-5 col-offset-1">
                             <div className="info-txt">
-                                <p>For assistance in case of any <br />medical emergency, call on our <br />24-hour helpline:</p>
+                                <p>For assistance in case of any medical emergency, call on our <br className="testbr"/>24-hour helpline:</p>
                                 <div className="info-links">
                                     <p>
                                         <a href><i className="fas fa-phone-alt" /> &nbsp; +91 75669 75666</a>
