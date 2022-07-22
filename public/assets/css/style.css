@@ -1918,6 +1918,7 @@ text-transform: capitalize;
 }
 .slick-prev{
   left: 3px ;
+  z-index: 50 !important;
 }
 .slick-next:before{
   font-size: 33px;
@@ -1926,8 +1927,8 @@ text-transform: capitalize;
 .slick-prev:before {
   font-size: 33px;
   /* position: sticky; */
-  background-color: black;
-  z-index: 50;
+  /* background-color: black; */
+  /* z-index: 50; */
 }
 .top-banner-slider .slick-next{
   display: none !important;

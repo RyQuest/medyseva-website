@@ -257,7 +257,7 @@ function ContactUs() {
 
                         <div className="col-md-5 col-offset-1">
                             <div className="info-txt">
-                                <p>For assistance in case of any medical emergency, call on our <br className="testbr"/>24-hour helpline:</p>
+                                <p>For assistance in case of any<br/> medical emergency, call on our <br className="testbr"/>24-hour helpline:</p>
                                 <div className="info-links">
                                     <p>
                                         <a href><i className="fas fa-phone-alt" /> &nbsp; +91 75669 75666</a>

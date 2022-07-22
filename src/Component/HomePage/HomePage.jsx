@@ -774,11 +774,13 @@ export default function HomePage() {
                 </div>
                 <div className="col-md-4 col-sm-6 col-12">
                   <div className="team-medi-box">
-                    <img className="doc-img" src="assets/img/team3.png" />
-                    <h3>DR.RASHMI PATIDAR</h3>
+                    <img className="doc-img" src="assets\img\team6.png" />
+                    <h3>DR. APOORV DUA</h3>
                     <h6>CHIEF MEDICAL OFFICER</h6>
                     <div className="other-info-box">
-                      <p>MBBS, MD(Pathology)</p>
+                      <p>MBBS, MS (ORTHOPAEDICS)</p>
+                      <p>Followship ( Minimal Invasive Surgery in Total <br/>Hip and Knee Replacement )</p>
+                      <p></p>
                       <p>10+ years experience in healthcare</p>
                     </div>
                     <div className="text-center">
