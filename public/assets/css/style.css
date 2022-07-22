@@ -1935,3 +1935,9 @@ text-transform: capitalize;
 .top-banner-slider .slick-prev{
   display: none !important;
 }
+.gallery-slider .slick-next{
+  display: none !important;
+}
+.gallery-slider .slick-prev{
+  display: none !important;
+}
